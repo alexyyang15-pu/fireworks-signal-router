@@ -99,12 +99,6 @@ TEMPLATE = r"""<!doctype html>
   .slack .sbtn.go { background: #007a5a; border-color: #007a5a; }
   .slack .note { font-size: 11px; color: #9a9b9e; padding: 0 14px 12px; text-align: center; }
 
-  .box { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
-  .box h4 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); text-align: center; }
-  .reps { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .reps td { padding: 5px 4px; border-bottom: 1px solid var(--line); }
-  .reps td.n { text-align: right; font-variant-numeric: tabular-nums; }
-  .reps .st { font-size: 11px; color: var(--warn); margin-left: 4px; }
 </style>
 </head>
 <body>
@@ -123,10 +117,6 @@ TEMPLATE = r"""<!doctype html>
     <main id="list"></main>
     <aside class="side">
       <div class="slack" id="slack"></div>
-      <div class="box">
-        <h4>Who got what</h4>
-        <table class="reps" id="reps"></table>
-      </div>
     </aside>
   </div>
 </div>
@@ -244,14 +234,7 @@ function renderSlack() {
     <div class="note">In production this posts as a DM to the owner. Here it previews the selected card.</div>`;
 }
 
-function renderReps() {
-  $("reps").innerHTML = DATA.sellers.map((s) => `<tr>
-    <td>${esc(s.name)}${s.status !== "active" ? `<span class="st">${esc(s.status)}</span>` : ""}</td>
-    <td>${esc(s.territory)}</td>
-    <td class="n">${s.customers} cust</td><td class="n">${s.prospects} pros</td></tr>`).join("");
-}
-
-function render() { renderControls(); renderList(); renderSlack(); renderReps(); }
+function render() { renderControls(); renderList(); renderSlack(); }
 
 document.addEventListener("click", (e) => {
   const t = e.target.closest("[data-list],[data-seg],[data-open],[data-select],[data-copy],[data-jump]");
