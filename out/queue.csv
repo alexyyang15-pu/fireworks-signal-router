@@ -3,43 +3,43 @@ customer,1,8.7,Caliber Robotics,A214,US-Central,Strategic,Enterprise-Expansion,D
 customer,2,7.5,Meridian Robotics,,US-East,Unknown,Unknown,Chris Walsh,1,"Usage up 354% on /v1/chat/completions (40,160 requests in 7 days)","Unmatched customer usage spike: senior rep in US-East, tier unknown",Fit unknown: account not in CRM
 customer,3,7.4,Urchin Secure,,APAC,Unknown,Unknown,Hiro Tanaka,1,"Usage up 315% on /v1/chat/completions (15,235 requests in 7 days)","Unmatched customer usage spike: senior rep in APAC, tier unknown",Fit unknown: account not in CRM
 customer,4,7.1,Yew Cloud,,US-Central,Unknown,Unknown,Diego Morales,1,"Usage up 254% on /v1/embeddings (25,958 requests in 7 days)","Unmatched customer usage spike: senior rep in US-Central, tier unknown",Fit unknown: account not in CRM
-customer,5,6.8,Helix Grid,A110,US-Central,Mid-Market,AI-Native,Diego Morales,1,New CTO: Avery Nguyen (joined from Brush Flow),US-Central / Mid-Market,
-customer,6,6.7,Fig Grid,A133,APAC,Mid-Market,Enterprise-Expansion,Hiro Tanaka,1,New Director of ML Platform: Riley Patel (joined from Nacre Defense),APAC / Mid-Market,
-customer,7,6.6,Cedar Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,"Usage up 78% on /v1/chat/completions (3,551 requests in 7 days)","Unmatched customer usage spike: senior rep in APAC, tier unknown",Fit unknown: account not in CRM
-customer,8,6.5,Nook Flow,A152,US-East,Mid-Market,AI-Native,Priya Shah,1,New Chief Architect: Casey Garcia (joined from Ironwood Scale),US-East / Mid-Market,
-customer,9,6.2,Hatchet Health,A070,APAC,Mid-Market,Enterprise-Expansion,Hiro Tanaka,1,"Researching ""open-source LLM hosting""",APAC / Mid-Market,
-customer,10,5.7,Gossamer Defense,A087,US-Central,Mid-Market,Enterprise-Expansion,Diego Morales,1,"Raised Series C, $60M",US-Central / Mid-Market,
-customer,11,5.4,Hollow Labs,A204,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,1,"Raised Series B, $40M",EMEA / Mid-Market,
-customer,12,5.2,Quinoa Scale,A181,EMEA,Enterprise,Enterprise-Expansion,Tom O'Brien,1,"Raised Seed Extension, $85M",EMEA / Enterprise,
+customer,5,6.7,Fig Grid,A133,APAC,Mid-Market,Enterprise-Expansion,Hiro Tanaka,1,New Director of ML Platform: Riley Patel (from Nacre Defense),APAC / Mid-Market,
+customer,6,6.6,Cedar Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,"Usage up 78% on /v1/chat/completions (3,551 requests in 7 days)","Unmatched customer usage spike: senior rep in APAC, tier unknown",Fit unknown: account not in CRM
+customer,7,6.2,Hatchet Health,A070,APAC,Mid-Market,Enterprise-Expansion,Hiro Tanaka,1,"Researching ""open-source LLM hosting""",APAC / Mid-Market,
+customer,8,5.7,Gossamer Defense,A087,US-Central,Mid-Market,Enterprise-Expansion,Diego Morales,1,"Raised Series C, $60M",US-Central / Mid-Market,
+customer,9,5.4,Hollow Labs,A204,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,1,"Raised Series B, $40M",EMEA / Mid-Market,
+customer,10,5.3,Nook Flow,A152,US-East,Mid-Market,AI-Native,Priya Shah,1,Chief Architect Casey Garcia left (champion risk),US-East / Mid-Market,
+customer,11,5.2,Quinoa Scale,A181,EMEA,Enterprise,Enterprise-Expansion,Tom O'Brien,1,"Raised Seed Extension, $85M",EMEA / Enterprise,
+customer,12,5.0,Helix Grid,A110,US-Central,Mid-Market,AI-Native,Diego Morales,1,CTO Avery Nguyen left (champion risk),US-Central / Mid-Market,
 customer,13,4.9,Garnet Networks,A295,US-Central,Mid-Market,AI-Native,Diego Morales,1,"Raised Seed Extension, $25M",US-Central / Mid-Market,
 prospect,1,9.3,Thorn Data,A196,APAC,Strategic,Enterprise-Expansion,Hiro Tanaka,2,"Researching ""function calling API""",APAC / Strategic,
 prospect,2,8.1,Chert Scale,A230,APAC,Mid-Market,AI-Native,Anika Reddy,1,Visited OpenAI pricing page (12 days since last signal),"Anika Reddy ramp starter book: 2 of 8 APAC signal accounts, mid-market prospects only",Anika Reddy is ramping; manager reviews before outreach
 prospect,3,7.8,Lupine Scale,A164,EMEA,Enterprise,Enterprise-Expansion,Tom O'Brien,3,"Researching ""RAG pipeline infrastructure""",EMEA / Enterprise,
 prospect,4,7.7,Helix Build,A269,US-East,Enterprise,Enterprise-Expansion,Alex Rivera,2,"Researching ""function calling API""",US-East / Enterprise,
 prospect,5,7.6,Osprey Grid,A197,APAC,Mid-Market,AI-Native,Anika Reddy,1,Searched Replicate comparisons (23 days since last signal),"Anika Reddy ramp starter book: 2 of 8 APAC signal accounts, mid-market prospects only",Anika Reddy is ramping; manager reviews before outreach
-prospect,6,7.6,Parallax Genomics,A095,US-West,Enterprise,Enterprise-Expansion,Jordan Kim,1,New Head of AI: Jordan Kim (joined from Kelp Defense),US-West / Enterprise,
-prospect,7,7.3,Alabaster Mind,A167,EMEA,Strategic,Enterprise-Expansion,Tom O'Brien,1,"Raised Series A, $120M",EMEA / Strategic,
-prospect,8,7.3,Hemp Intelligence,A124,US-Central,Strategic,Enterprise-Expansion,Diego Morales,1,Read Replicate docs (26 days since last signal),US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
-prospect,9,7.2,Iris Secure,,US-East,Unknown,Unknown,Priya Shah,1,Searched Together AI comparisons (4 days since last signal),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
-prospect,10,7.2,Russet Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,Visited Together AI pricing page (4 days since last signal),"Unmatched signal: mid-market rep in APAC, tier unknown",Fit unknown: account not in CRM
-prospect,11,7.2,Grove Grid,A176,US-East,Strategic,Enterprise-Expansion,Chris Walsh,1,"Raised Series C, $60M",US-East / Strategic (round robin: Alex Rivera / Chris Walsh),
-prospect,12,7.1,Zinnia Mind,A232,US-East,Mid-Market,AI-Native,Priya Shah,1,"Researching ""LLM inference cost optimization""",US-East / Mid-Market,
-prospect,13,7.0,Solace Build,A251,EMEA,Enterprise,AI-Native,Tom O'Brien,1,Searched Anyscale comparisons (19 days since last signal),EMEA / Enterprise,
-prospect,14,6.8,Pioneer Health,A177,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,2,New Director of ML Platform: Jordan Kim (joined from Beryl Genomics),EMEA / Mid-Market,
-prospect,15,6.8,Heron Systems,A235,US-Central,Enterprise,Enterprise-Expansion,Diego Morales,1,Visited Anyscale pricing page (9 days since last signal),US-Central / Enterprise,
-prospect,16,6.5,Tarragon Scale,A013,US-Central,Strategic,AI-Native,Diego Morales,1,"Raised Series A, $200M",US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
-prospect,17,6.2,Dolomite Systems,A223,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,1,"Researching ""GPU alternatives""",EMEA / Mid-Market,
-prospect,18,6.2,Quill Flow,A096,US-Central,Mid-Market,AI-Native,Diego Morales,1,"Researching ""GPU alternatives""",US-Central / Mid-Market,
-prospect,19,6.1,Onyx Genomics,,US-East,Unknown,Unknown,Priya Shah,1,New VP Infrastructure: Avery Nguyen (joined from Umber Systems),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
-prospect,20,6.0,Umber Vision,,US-Central,Unknown,Unknown,Diego Morales,1,"Raised Series D, $25M","Unmatched signal: mid-market rep in US-Central, tier unknown","Fit unknown: account not in CRM | Name matches A229 (Umber Vision, umbervision.io) but the domain differs; confirm before merging"
-prospect,21,5.9,Vermilion Flow,,US-East,Unknown,Unknown,Priya Shah,1,New VP Infrastructure: Avery Garcia (joined from Cedar Networks),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
-prospect,22,5.7,Pulse Grid,,US-West,Unknown,Unknown,Sam Chen,1,"Researching ""model serving latency""","Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
-prospect,23,5.7,Saffron Grid,,US-West,Unknown,Unknown,Sam Chen,1,New Chief Architect: Riley Kim (joined from Elm Pay),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
-prospect,24,5.5,Lichen Cloud,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (15 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
-prospect,25,5.3,Lark Health,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (26 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
-prospect,26,5.0,Yarrow Build,A283,US-East,Strategic,AI-Native,Alex Rivera,1,"Raised Seed Extension, $40M",US-East / Strategic (round robin: Alex Rivera / Chris Walsh),
-prospect,27,4.9,Bastion Systems,,EMEA,Unknown,Unknown,Lena Vogt,1,"Raised Series B, $15M","Unmatched signal: mid-market rep in EMEA, tier unknown",Fit unknown: account not in CRM
-prospect,28,4.5,Alabaster Data,,US-East,Unknown,Unknown,Priya Shah,1,New Staff ML Engineer: Morgan Smith (joined from Slate Intelligence),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
-prospect,29,4.3,Urchin Networks,,US-Central,Unknown,Unknown,Diego Morales,1,New Staff ML Engineer: Avery Smith (joined from Bastion Systems),"Unmatched signal: mid-market rep in US-Central, tier unknown",Fit unknown: account not in CRM
-prospect,30,4.1,Tundra Labs,A047,US-Central,Mid-Market,AI-Native,Diego Morales,1,"Raised Series A, $25M",US-Central / Mid-Market,
-prospect,31,4.1,Sentinel Mind,A221,EMEA,Enterprise,Enterprise-Expansion,Tom O'Brien,1,New Staff ML Engineer: Casey Nguyen (joined from Elder Pay),EMEA / Enterprise,
+prospect,6,7.3,Alabaster Mind,A167,EMEA,Strategic,Enterprise-Expansion,Tom O'Brien,1,"Raised Series A, $120M",EMEA / Strategic,
+prospect,7,7.3,Hemp Intelligence,A124,US-Central,Strategic,Enterprise-Expansion,Diego Morales,1,Read Replicate docs (26 days since last signal),US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
+prospect,8,7.2,Iris Secure,,US-East,Unknown,Unknown,Priya Shah,1,Searched Together AI comparisons (4 days since last signal),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
+prospect,9,7.2,Russet Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,Visited Together AI pricing page (4 days since last signal),"Unmatched signal: mid-market rep in APAC, tier unknown",Fit unknown: account not in CRM
+prospect,10,7.2,Grove Grid,A176,US-East,Strategic,Enterprise-Expansion,Chris Walsh,1,"Raised Series C, $60M",US-East / Strategic (round robin: Alex Rivera / Chris Walsh),
+prospect,11,7.1,Zinnia Mind,A232,US-East,Mid-Market,AI-Native,Priya Shah,1,"Researching ""LLM inference cost optimization""",US-East / Mid-Market,
+prospect,12,7.0,Solace Build,A251,EMEA,Enterprise,AI-Native,Tom O'Brien,1,Searched Anyscale comparisons (19 days since last signal),EMEA / Enterprise,
+prospect,13,6.8,Pioneer Health,A177,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,2,New Director of ML Platform: Jordan Kim (from Beryl Genomics),EMEA / Mid-Market,
+prospect,14,6.8,Heron Systems,A235,US-Central,Enterprise,Enterprise-Expansion,Diego Morales,1,Visited Anyscale pricing page (9 days since last signal),US-Central / Enterprise,
+prospect,15,6.5,Tarragon Scale,A013,US-Central,Strategic,AI-Native,Diego Morales,1,"Raised Series A, $200M",US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
+prospect,16,6.2,Dolomite Systems,A223,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,1,"Researching ""GPU alternatives""",EMEA / Mid-Market,
+prospect,17,6.2,Quill Flow,A096,US-Central,Mid-Market,AI-Native,Diego Morales,1,"Researching ""GPU alternatives""",US-Central / Mid-Market,
+prospect,18,6.0,Umber Vision,,US-Central,Unknown,Unknown,Diego Morales,1,"Raised Series D, $25M","Unmatched signal: mid-market rep in US-Central, tier unknown","Fit unknown: account not in CRM | Name matches A229 (Umber Vision, umbervision.io) but the domain differs; confirm before merging"
+prospect,19,5.7,Pulse Grid,,US-West,Unknown,Unknown,Sam Chen,1,"Researching ""model serving latency""","Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
+prospect,20,5.5,Lichen Cloud,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (15 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
+prospect,21,5.3,Parallax Genomics,A095,US-West,Enterprise,Enterprise-Expansion,Jordan Kim,1,Head of AI Jordan Kim left,US-West / Enterprise,
+prospect,22,5.3,Lark Health,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (26 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
+prospect,23,5.0,Yarrow Build,A283,US-East,Strategic,AI-Native,Alex Rivera,1,"Raised Seed Extension, $40M",US-East / Strategic (round robin: Alex Rivera / Chris Walsh),
+prospect,24,4.9,Bastion Systems,,EMEA,Unknown,Unknown,Lena Vogt,1,"Raised Series B, $15M","Unmatched signal: mid-market rep in EMEA, tier unknown",Fit unknown: account not in CRM
+prospect,25,4.5,Alabaster Data,,US-East,Unknown,Unknown,Priya Shah,1,New Staff ML Engineer: Morgan Smith (from Slate Intelligence),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
+prospect,26,4.3,Urchin Networks,,US-Central,Unknown,Unknown,Diego Morales,1,New Staff ML Engineer: Avery Smith (from Bastion Systems),"Unmatched signal: mid-market rep in US-Central, tier unknown",Fit unknown: account not in CRM
+prospect,27,4.3,Onyx Genomics,,US-East,Unknown,Unknown,Priya Shah,1,VP Infrastructure Avery Nguyen left,"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
+prospect,28,4.1,Tundra Labs,A047,US-Central,Mid-Market,AI-Native,Diego Morales,1,"Raised Series A, $25M",US-Central / Mid-Market,
+prospect,29,4.1,Vermilion Flow,,US-East,Unknown,Unknown,Priya Shah,1,VP Infrastructure Avery Garcia left,"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
+prospect,30,3.9,Saffron Grid,,US-West,Unknown,Unknown,Sam Chen,1,Chief Architect Riley Kim left,"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
+prospect,31,3.6,Sentinel Mind,A221,EMEA,Enterprise,Enterprise-Expansion,Tom O'Brien,1,Staff ML Engineer Casey Nguyen left,EMEA / Enterprise,

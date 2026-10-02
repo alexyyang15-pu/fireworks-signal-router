@@ -113,7 +113,7 @@ Every signal also gets the **severity hint: high +5, medium 0, low −5**.
 | Intent | 50 + intensity × 30 + topic + source | 71 to 89 |
 | Competitor | action + competitor + freshness | 44 to 95 |
 | Funding | round + min(15, $M / 10) | 35 to 74 |
-| Job change | title points for the new hire | 40 to 83 |
+| Job change | title points (arrival) or flat (departure) | 28 to 73 |
 
 **Intent topic and source**
 
@@ -142,13 +142,13 @@ Plus `min(15, amount_usd_m / 10)`.
 
 **Job change**
 
-The row's account is where the person joined. `direction: departed` means they left `previous_company`, so every job change scores as a new hire.
-
-| New hire's title | Points |
+| Change | Points |
 |---|---|
-| CTO, Head of AI | 78 |
-| VP Infrastructure, Director of ML Platform, Chief Architect | 68 |
-| Staff ML Engineer | 40 |
+| Arrived: CTO, Head of AI | 78 |
+| Arrived: VP Infrastructure, Director of ML Platform, Chief Architect | 68 |
+| Arrived: Staff ML Engineer | 40 |
+| Departed at a customer (save play) | 48 |
+| Departed at a prospect | 28 |
 
 **Usage volume** (requests in 7 days): ≥ 40k +8, ≥ 20k +5, ≥ 10k +3.
 
@@ -202,6 +202,6 @@ Customer, Logistics, `$250M+`, US-Central Strategic. Rachel Park is OOO, so Dieg
 | Account | List, rank | Why it lands there |
 |---|---|---|
 | Lupine Scale | Prospect #3 | Three signals stack to 105, capped at 100; E-commerce fit holds it below Thorn and Chert |
-| Meridian Robotics vs Cedar Defense | Customer #2 vs #7 | Both usage spikes. Payload beats severity hint: +354% marked low outranks +78% marked high |
-| Alabaster Mind vs Iris Secure | Prospect #7 vs #9 | Strong fit (DevTools, `$250M+`) on one funding event beats a hot Together AI comparison with no CRM data. Known first-draft tradeoff |
+| Meridian Robotics vs Cedar Defense | Customer #2 vs #6 | Both usage spikes. Payload beats severity hint: +354% marked low outranks +78% marked high |
+| Alabaster Mind vs Iris Secure | Prospect #6 vs #8 | Strong fit (DevTools, `$250M+`) on one funding event beats a hot Together AI comparison with no CRM data. Known first-draft tradeoff |
 | Chert Scale, Osprey Grid | Prospect #2, #5 | Small AI-native accounts in the top industries rise by design |

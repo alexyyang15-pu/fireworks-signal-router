@@ -10,7 +10,8 @@ PLAYS = {
     "usage_spike": "Expansion: usage is climbing. Offer a capacity and pricing review before they hit limits.",
     "competitor_evaluation": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
     "intent_topic": "Education: they are researching what we sell. Send the matching proof point and offer a technical session.",
-    "job_change": "New buyer: introduce Fireworks in their first 90 days, before vendors are locked in.",
+    "job_change_arrived": "New buyer: introduce Fireworks in their first 90 days, before vendors are locked in.",
+    "job_change_departed": "Risk: a champion left. Confirm who owns the relationship now.",
     "funding_event": "Timing: fresh budget. Anchor on scaling inference cost as they grow.",
 }
 
@@ -26,9 +27,15 @@ PROOF_BY_TOPIC = {
 DEFAULT_PROOF = "Cursor, Notion, and Vercel run production inference on Fireworks"
 
 
+def _play_key(signal):
+    if signal.signal_type == "job_change":
+        return "job_change_" + signal.detail.get("direction", "arrived")
+    return signal.signal_type
+
+
 def play(card: Card) -> str:
     top = card.score.signals[0].signal
-    return PLAYS.get(top.signal_type, "Review the signal and decide on outreach.")
+    return PLAYS.get(_play_key(top), "Review the signal and decide on outreach.")
 
 
 def proof_point(card: Card) -> str:
@@ -55,7 +62,7 @@ def brief(card: Card) -> str:
 
 def _contact(card: Card) -> str:
     for s in card.signals:
-        if s.signal_type == "job_change":
+        if s.signal_type == "job_change" and s.detail.get("direction") == "arrived":
             return s.detail.get("person", "")
     return ""
 
@@ -86,11 +93,17 @@ def email(card: Card) -> dict:
             "Teams looking at %s usually care about speed and cost per token. %s. "
             "Worth a 20-minute technical session?" % (d.get("topic", "inference"), proof)
         )
-    elif top.signal_type == "job_change":
+    elif top.signal_type == "job_change" and d.get("direction") == "arrived":
         subject = "Congrats on the new role at %s" % card.name
         hook = (
             "Congrats on joining as %s. New platform leaders often revisit their inference stack early. "
             "%s. Open to comparing notes?" % (d.get("new_title", "a new leader"), proof)
+        )
+    elif top.signal_type == "job_change":
+        subject = "Staying aligned on Fireworks at %s" % card.name
+        hook = (
+            "I saw %s moved on. I want to make sure your team has the right Fireworks contact and "
+            "nothing in flight is stalled." % d.get("person", "a teammate")
         )
     else:
         subject = "Congrats on the %s" % d.get("round", "raise")

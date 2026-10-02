@@ -60,8 +60,8 @@ COMPETITOR_POINTS = {"Together AI": 6, "Replicate": 6, "Anyscale": 6, "OpenAI": 
 COMPETITOR_FRESHNESS = [(7, 10), (14, 5), (21, 0)]
 COMPETITOR_STALE_POINTS = -8
 
-# --- job_change: points by the new hire's title, + severity
-JOB_TITLE_POINTS = {
+# --- job_change: title points for arrivals, flat points for departures, + severity
+JOB_ARRIVAL_POINTS = {
     "CTO": 78,
     "Head of AI": 78,
     "VP Infrastructure": 68,
@@ -69,7 +69,9 @@ JOB_TITLE_POINTS = {
     "Chief Architect": 68,
     "Staff ML Engineer": 40,
 }
-JOB_TITLE_DEFAULT = 40
+JOB_ARRIVAL_DEFAULT = 40
+JOB_DEPARTURE_CUSTOMER = 48
+JOB_DEPARTURE_PROSPECT = 28
 
 # --- usage_spike: base + min(cap, pct / divisor) + volume + severity
 USAGE_BASE = 70
