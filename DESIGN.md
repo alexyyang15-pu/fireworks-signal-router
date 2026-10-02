@@ -1,6 +1,6 @@
 # Signal Router: design
 
-Scores signals **per account** and routes each account to one seller. Sellers see two lists: **Customers** (expand) and **Prospects** (net-new). Rankings and point values are in DIAGRAMS.md.
+Scores signals **per account** and routes each account to one seller. Sellers see two lists: **Customers** (expand) and **Prospects** (net-new). Rankings of industry, signals, and their individual point values are in DIAGRAMS.md.
 
 ## Routing logic
 
@@ -38,10 +38,11 @@ Log each account against Salesforce pipeline. Each month, move a weight when an 
 
 ## What I'd do differently
 
-Route customers to their real owner before territory. Review fuzzy matches instead of treating unknown fit as neutral.
+- Route customers to their real owner before territory.
+- Review fuzzy matches instead of treating unknown fit as neutral.
 
 ## How AI was used
 
 - **Good for:** finding the 16 unmatched signals, the Umber Vision collision, the out-of-office and ramp gaps, and that every usage spike is a customer. Researching public Fireworks customers for the industry ladder. Writing the router, tests, and dashboard.
 - **Where it fell short:** the first point values had no reasons, so I made it justify each one. It proposed a different fit formula per segment. I replaced that with one formula, half ARR and half industry.
-- **What I decided:** the weights in the table above. The industry ranking, from public customers. Anika gets 25% of APAC signal accounts while she ramps. Diego covers Rachel, so a signal does not sit in a queue.
+- **What I decided:** the weights in the table above. The industry ranking, after using AI to research Fireworks' public customers and products. Anika gets 25% of APAC signal accounts while she ramps. Diego covers Rachel (OOO), so a signal does not sit in a queue.
