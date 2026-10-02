@@ -49,11 +49,12 @@ TEMPLATE = r"""<!doctype html>
   .owner b { display: block; color: var(--ink); font-size: 14px; }
 
   .signals { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; }
-  .signals li { display: grid; grid-template-columns: 150px minmax(0, 1fr) 56px; gap: 10px; align-items: center;
+  .signals li { display: grid; grid-template-columns: 150px minmax(0, 1fr) 56px 56px; gap: 10px; align-items: center;
                 padding: 7px 10px; background: var(--bg); border-radius: 8px; }
   .type { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); font-weight: 600; text-align: center;
           background: var(--accent-soft); border-radius: 6px; padding: 3px 6px; }
   .sigscore { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .sigdate { text-align: right; color: var(--muted); font-size: 13px; white-space: nowrap; }
 
   .flags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
   .flag { font-size: 12px; background: var(--warn-soft); color: var(--warn); border-radius: 999px; padding: 3px 10px; }
@@ -136,6 +137,7 @@ const state = { list: "customer", segment: "all", seller: "all", selected: null,
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const heat = (score) => score >= 8 ? "hot" : score >= 6.5 ? "warm" : "cool";
+const fmtDate = (iso) => new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 const pts = (p) => (p >= 0 ? "+" : "\u2212") + Math.abs(p).toFixed(1);
 const TYPE = { usage_spike: "Usage spike", competitor_evaluation: "Competitor", intent_topic: "Intent", job_change: "Job change", funding_event: "Funding" };
 const SEGMENTS = [["all", "All"], ["AI-Native", "AI-Native"], ["Enterprise-Expansion", "Enterprise Expansion"], ["Unknown", "Not in CRM"]];
@@ -182,7 +184,7 @@ function cardHtml(c) {
   const meta = c.account_id
     ? [c.region, c.tier, c.segment, c.industry, c.arr_band + " ARR"].join(" &middot; ")
     : [c.region, esc(c.domain), "not in CRM"].join(" &middot; ");
-  const signals = c.signals.map((s) => `<li><span class="type">${TYPE[s.type] || s.type}</span><span>${esc(s.headline)}</span><span class="sigscore">${s.score.toFixed(0)} pts</span></li>`).join("");
+  const signals = c.signals.map((s) => `<li><span class="type">${TYPE[s.type] || s.type}</span><span>${esc(s.headline)}</span><time class="sigdate" datetime="${s.timestamp}">${fmtDate(s.timestamp)}</time><span class="sigscore">${s.score.toFixed(0)} pts</span></li>`).join("");
   const flags = c.flags.length ? `<div class="flags">${c.flags.map((f) => `<span class="flag">${esc(f)}</span>`).join("")}</div>` : "";
   const btn = (k, label) => `<button class="btn ${open === k ? "on" : ""}" data-open="${k}" data-key="${esc(c.key)}">${label}</button>`;
   let panel = "";
