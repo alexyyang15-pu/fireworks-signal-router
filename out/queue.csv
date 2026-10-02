@@ -1,10 +1,10 @@
 list,rank,score,account,account_id,region,tier,segment,owner,signals,top_signal,route_reason,flags
 customer,1,8.7,Caliber Robotics,A214,US-Central,Strategic,Enterprise-Expansion,Diego Morales,2,"Researching ""fine-tuning platform""",US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
-customer,2,7.5,Meridian Robotics,,US-East,Unknown,Unknown,Chris Walsh,1,"Usage up 354% on /v1/chat/completions (40,160 requests in 7 days)","Unmatched customer usage spike: senior rep in US-East, tier unknown",Fit unknown: account not in CRM
-customer,3,7.4,Urchin Secure,,APAC,Unknown,Unknown,Hiro Tanaka,1,"Usage up 315% on /v1/chat/completions (15,235 requests in 7 days)","Unmatched customer usage spike: senior rep in APAC, tier unknown",Fit unknown: account not in CRM
-customer,4,7.1,Yew Cloud,,US-Central,Unknown,Unknown,Diego Morales,1,"Usage up 254% on /v1/embeddings (25,958 requests in 7 days)","Unmatched customer usage spike: senior rep in US-Central, tier unknown",Fit unknown: account not in CRM
+customer,2,7.5,Meridian Robotics,,US-East,Unknown,Unknown,Priya Shah,1,"Usage up 354% on /v1/chat/completions (40,160 requests in 7 days)","Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
+customer,3,7.4,Urchin Secure,,APAC,Unknown,Unknown,Hiro Tanaka,1,"Usage up 315% on /v1/chat/completions (15,235 requests in 7 days)","Unmatched signal: mid-market rep in APAC, tier unknown",Fit unknown: account not in CRM
+customer,4,7.1,Yew Cloud,,US-Central,Unknown,Unknown,Diego Morales,1,"Usage up 254% on /v1/embeddings (25,958 requests in 7 days)","Unmatched signal: mid-market rep in US-Central, tier unknown",Fit unknown: account not in CRM
 customer,5,6.7,Fig Grid,A133,APAC,Mid-Market,Enterprise-Expansion,Hiro Tanaka,1,New Director of ML Platform: Riley Patel (from Nacre Defense),APAC / Mid-Market,
-customer,6,6.6,Cedar Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,"Usage up 78% on /v1/chat/completions (3,551 requests in 7 days)","Unmatched customer usage spike: senior rep in APAC, tier unknown",Fit unknown: account not in CRM
+customer,6,6.6,Cedar Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,"Usage up 78% on /v1/chat/completions (3,551 requests in 7 days)","Unmatched signal: mid-market rep in APAC, tier unknown",Fit unknown: account not in CRM
 customer,7,6.2,Hatchet Health,A070,APAC,Mid-Market,Enterprise-Expansion,Hiro Tanaka,1,"Researching ""open-source LLM hosting""",APAC / Mid-Market,
 customer,8,5.7,Gossamer Defense,A087,US-Central,Mid-Market,Enterprise-Expansion,Diego Morales,1,"Raised Series C, $60M",US-Central / Mid-Market,
 customer,9,5.4,Hollow Labs,A204,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,1,"Raised Series B, $40M",EMEA / Mid-Market,

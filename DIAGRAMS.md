@@ -5,48 +5,50 @@ A visual reference for routing and scoring. Every number here is a constant in [
 ## 1. End to end
 
 ```mermaid
-flowchart LR
-    raw["50 raw signals"] --> match{"Match to account"}
-    match -->|"account_id or exact domain"| crm["Known account: ARR, industry, segment"]
-    match -->|"no match"| unk["Not in CRM: fit unknown flag"]
-    crm --> score["Score each signal from its payload"]
-    unk --> score
-    score --> stack["Stack signals per account"]
-    stack --> blend["Blend with fit and recency"]
-    blend --> lists{"Customer or prospect?"}
-    lists --> cust["Customer list: 60 / 30 / 10"]
-    lists --> pros["Prospect list: 45 / 45 / 10"]
-    cust --> route["Route to a seller"]
+flowchart TB
+    raw["50 signals"] --> match{"Matched?"}
+    match -->|"account id or domain"| known["Known account"]
+    match -->|"no match"| unknown["Not in CRM"]
+    known --> score["Score each signal"]
+    unknown --> score
+    score --> stack["Stack per account"]
+    stack --> blend{"Customer or prospect?"}
+    blend -->|customer| cust["60% signal, 30% fit, 10% recency"]
+    blend -->|prospect| pros["45% signal, 45% fit, 10% recency"]
+    cust --> route["One seller"]
     pros --> route
-    route --> card["Seller card: score, why, brief, email, Salesforce"]
-    card --> slack["Slack DM to owner"]
+    route --> card["Card and Slack DM"]
 ```
 
 50 signals become 44 account cards: 13 customers and 31 prospects. 16 signals don't match an account in the CRM.
 
 ## 2. Routing decision tree
 
+The ramping rep stops here. Every other account picks a pool, and that pool continues through the same steps.
+
 ```mermaid
-flowchart TD
-    start["Account card"] --> ramp{"Ramp rep share?"}
-    ramp -->|"APAC matched mid-market prospect, top 25 percent of APAC cards"| anika["Anika Reddy, ramp starter book"]
-    ramp -->|"no"| matched{"In CRM?"}
-    matched -->|"no, customer usage spike"| senior["Active Strategic or Enterprise rep in region"]
-    matched -->|"no, any other signal"| mm["Active Mid-Market rep in region"]
-    matched -->|"yes"| tier["Tier from ARR band"]
-    tier --> region["Territory = account region"]
-    region --> active{"Active rep for this territory and tier?"}
-    active -->|"one rep"| owner["Owner"]
-    active -->|"two reps"| rr["Round robin: fewest cards of this list, then fewest overall"]
-    rr --> owner
-    active -->|"only rep is OOO"| cover["Next tier down covers, flagged temporary"]
-    cover --> owner
-    senior --> owner
-    mm --> owner
+flowchart TB
+    card["Account card"] --> ramp{"Ramping rep?"}
+    ramp -->|"Matched mid-market prospect"| rampRep["Ramping rep"]
+    ramp -->|no| crm{"In the CRM?"}
+    crm -->|no| mm["Mid-market reps in the region"]
+    crm -->|yes| tier{"Tier from ARR"}
+    tier -->|"Strategic or Enterprise"| senior["Senior reps in the region"]
+    tier -->|Mid-Market| mm
+    senior --> pool["Reps in that pool"]
+    mm --> pool
+    pool --> active{"Who is active?"}
+    active -->|one| owner["That rep"]
+    active -->|two| rr["Round robin"]
+    active -->|"only rep is out"| cover["Next tier down"]
     owner --> cap{"Under capacity?"}
-    cap -->|"yes"| done["Assigned"]
-    cap -->|"no"| hold["Hold queue for manager"]
+    rr --> cap
+    cover --> cap
+    cap -->|yes| done["Assigned"]
+    cap -->|no| hold["Hold queue"]
 ```
+
+Round robin picks the rep with the fewest cards on that list, then the fewest overall. Coverage for an out-of-office rep is flagged as temporary.
 
 | ARR band | Tier |
 |---|---|
@@ -55,35 +57,20 @@ flowchart TD
 | `$10M-$50M`, `$1M-$10M`, `<$1M` | Mid-Market |
 | Not in CRM | Unknown |
 
-| Seller | Territory | Tiers | Status | Cards (customers / prospects) | Why |
-|---|---|---|---|---|---|
-| Alex Rivera | US-East | Strategic, Enterprise | active | 0 / 2 | Helix Build; round robin with Chris |
-| Chris Walsh | US-East | Strategic | active | 1 / 1 | Round robin; took Meridian usage spike |
-| Priya Shah | US-East | Mid-Market | active | 1 / 5 | Mid-market plus unmatched US-East |
-| Marcus Lee | US-West | Strategic | active | 0 / 0 | No US-West Strategic signals |
-| Jordan Kim | US-West | Enterprise | active | 0 / 1 | Parallax Genomics |
-| Sam Chen | US-West | Mid-Market | active | 0 / 4 | Unmatched US-West |
-| Diego Morales | US-Central | Enterprise, Mid-Market | active | 5 / 7 | Includes 3 Strategic cards covering Rachel |
-| Rachel Park | US-Central | Strategic | **OOO** | 0 / 0 | Out; Diego covers |
-| Tom O'Brien | EMEA | Strategic, Enterprise | active | 1 / 4 | |
-| Lena Vogt | EMEA | Mid-Market | active | 1 / 3 | |
-| Hiro Tanaka | APAC | All three | active | 4 / 2 | Keeps Thorn Data and every APAC customer |
-| Anika Reddy | APAC | none listed | **ramp** | 0 / 2 | Chert Scale, Osprey Grid (2 of 8 APAC cards) |
-
 ## 3. Scoring flow
 
 ```mermaid
-flowchart LR
-    s1["Signal score, 0 to about 100, from its payload"] --> sort["Sort signals on the account"]
-    sort --> stack["Stack: 1.00 x best + 0.25 x 2nd + 0.12 x 3rd, cap 100"]
-    fitin["ARR points and industry points"] --> fit["Fit = 0.5 ARR + 0.5 industry"]
-    rec["Newest signal time"] --> recency["Recency 40 to 100 across the file window"]
-    stack --> blend{"Customer or prospect"}
+flowchart TB
+    payload["Payload points"] --> stack["Stack: 100% + 25% + 12%, cap 100"]
+    arr["ARR"] --> fit["Fit: half ARR, half industry"]
+    industry["Industry"] --> fit
+    newest["Newest signal"] --> recency["Recency: 40 to 100"]
+    stack --> blend{"Customer or prospect?"}
     fit --> blend
     recency --> blend
-    blend -->|"customer"| c["0.60 signal + 0.30 fit + 0.10 recency"]
-    blend -->|"prospect"| p["0.45 signal + 0.45 fit + 0.10 recency"]
-    c --> out["Score out of 100, shown as 1 to 10"]
+    blend -->|customer| c["60 / 30 / 10"]
+    blend -->|prospect| p["45 / 45 / 10"]
+    c --> out["Score out of 10"]
     p --> out
 ```
 
@@ -94,93 +81,139 @@ flowchart LR
 | Customer | 60% | 30% | 10% |
 | Prospect | 45% | 45% | 10% |
 
-| Signal on the account | Counts |
-|---|---|
-| Strongest | 100% |
-| 2nd | 25% |
-| 3rd | 12% |
-| 4th and later | 0% |
+**Ranking: how much each signal on the same account counts.** Highest first. A fourth signal adds nothing, so a pile of weak signals cannot outrank one strong one. The stack caps at 100, and the card shows anything above the cap as a negative "Signal cap" line.
 
-Stacked signals cap at 100. The card shows anything above the cap as a negative "Signal cap" line, so the lines still add up.
+| Rank | Signal on the account | Counts | Why this rank |
+|---|---|---|---|
+| 1 | Strongest | 100% | This is the thing that happened |
+| 2 | 2nd | 25% | Extra evidence. It does not get an equal vote |
+| 3 | 3rd | 12% | A little more conviction |
+| 4 | 4th and later | 0% | Ignored |
 
-### Signal formulas
+### Rankings inside a signal
 
-Every signal also gets the **severity hint: high +5, medium 0, low −5**.
+Every table below is a ranking, highest first. **Why this rank** is the reason that row sits above the next one. Every signal also gets the severity ranking at the bottom of this section.
 
-| Signal | Formula | Range in this file |
-|---|---|---|
-| Usage spike | 70 + min(20, pct increase / 20) + volume | 79 to 91 |
-| Intent | 50 + intensity × 30 + topic + source | 71 to 89 |
-| Competitor | action + competitor + freshness | 44 to 95 |
-| Funding | round + min(15, $M / 10) | 35 to 74 |
-| Job change | title points (arrival) or 0.6 × title points (departure) | 24 to 73 |
+**Ranking: signal type**
 
-**Intent topic and source**
-
-| Topic | Points | | Source | Points |
+| Rank | Signal | Formula | Range in this file | Why this rank |
 |---|---|---|---|---|
-| GPU alternatives, inference cost, serving latency, fine-tuning, function calling, open-source hosting | +10 | | G2, 6sense | +6 |
-| RAG pipeline infrastructure | +4 | | Harmonic | +3 |
-| Anything else | 0 | | Web traffic | 0 |
+| 1 | Usage spike | 70 + min(20, pct increase / 20) + volume | 79 to 91 | Observed usage on a paying customer. A fact, not an inference |
+| 2 | Competitor | action + competitor + freshness | 44 to 95 | They are shopping a vendor now. A pricing page can outscore usage; a stale benchmark sits much lower, which is why the range is wide |
+| 3 | Intent | 50 + intensity × 30 + topic + source | 71 to 89 | They are researching what we sell. Weaker than a live evaluation |
+| 4 | New hire, arrived | title points | up to 83 | A new budget owner revisits the stack in the first 90 days |
+| 5 | Funding | round + min(15, $M / 10) | 35 to 74 | Budget timing, not intent |
+| 6 | Departure | 0.6 × the same title's arrival points | 24 to 47 | The seat will be filled, but the buyer is not there yet |
 
-**Competitor**
+**Ranking: intent topic.** Topic points measure product fit.
 
-| Action | Points | | Competitor | Points | | Days since last signal | Points |
-|---|---|---|---|---|---|---|---|
-| Pricing page visit | 82 | | Together AI | +6 | | ≤ 7 | +10 |
-| Comparison search | 74 | | Replicate | +6 | | ≤ 14 | +5 |
-| Docs read | 58 | | Anyscale | +6 | | ≤ 21 | 0 |
-| Benchmark download | 46 | | OpenAI | 0 | | > 21 | −8 |
+| Rank | Topic | Points | Why this rank |
+|---|---|---|---|
+| 1 | GPU alternatives, inference cost, serving latency, fine-tuning, function calling, open-source hosting | +10 | This is the product Fireworks sells |
+| 2 | RAG pipeline infrastructure | +4 | Adjacent. They may need retrieval, not necessarily our inference |
+| 3 | Anything else | 0 | The topic shows no product fit |
 
-**Funding round**
+**Ranking: intent source.** Source points measure confidence in the data, separate from the topic.
 
-| Seed Extension | Series A | Series B | Series C | Series D |
+| Rank | Source | Points | Why this rank |
+|---|---|---|---|
+| 1 | G2, 6sense | +6 | Purpose-built in-market data |
+| 2 | Harmonic | +3 | Broad coverage, not an evaluation of who is buying |
+| 3 | Web traffic | 0 | The noisiest source, so it adds nothing |
+
+**Ranking: competitor action.** How close the visit is to a buying decision.
+
+| Rank | Action | Points | Why this rank |
+|---|---|---|---|
+| 1 | Pricing page visit | 82 | They are comparing cost. Closest to a deal |
+| 2 | Comparison search | 74 | They are shopping vendors |
+| 3 | Docs read | 58 | They are learning the product. Earlier in the cycle |
+| 4 | Benchmark download | 46 | Research. Furthest from a decision |
+
+**Ranking: which competitor.** The action still scores either way. These points are only the bonus.
+
+| Rank | Competitor | Points | Why this rank |
+|---|---|---|---|
+| 1 | Together AI, Replicate, Anyscale | +6 | A deal we can win on price and speed |
+| 2 | OpenAI | 0 | Harder to win on price and speed, so the competitor adds nothing |
+
+**Ranking: competitor freshness.** Days since their last signal.
+
+| Rank | Days since last signal | Points | Why this rank |
+|---|---|---|---|
+| 1 | 7 or fewer | +10 | In market this week |
+| 2 | 8 to 14 | +5 | Still recent |
+| 3 | 15 to 21 | 0 | No boost |
+| 4 | More than 21 | −8 | Stale. The evaluation may already be over |
+
+**Ranking: funding round.** A later round is a larger budget event. This is timing, not proof they want Fireworks. A bigger check adds `min(15, $M / 10)` on top of the round.
+
+| Rank | Round | Points | Why this rank |
+|---|---|---|---|
+| 1 | Series D | 66 | Most capital in this file |
+| 2 | Series C | 58 | One round smaller than Series D |
+| 3 | Series B | 50 | One round smaller than Series C |
+| 4 | Series A | 42 | One round smaller than Series B |
+| 5 | Seed Extension | 32 | Earliest round here, so the smallest budget signal |
+
+**Ranking: job change, by title.** `arrived` means they joined the company on that row. `departed` means they left it. A departure scores 0.6 × the same title, because the seat will be filled but the new person cannot evaluate yet.
+
+| Rank | Title | Arrived | Departed | Why this rank |
 |---|---|---|---|---|
-| 32 | 42 | 50 | 58 | 66 |
+| 1 | CTO, Head of AI | 78 | 46.8 | Owns the budget and the stack decision |
+| 2 | VP Infrastructure, Director of ML Platform, Chief Architect | 68 | 40.8 | Owns the platform decision, one level from the budget |
+| 3 | Staff ML Engineer | 40 | 24 | Does not buy. Can still influence a build, so it scores |
 
-Plus `min(15, amount_usd_m / 10)`.
+**Ranking: usage volume.** Requests in 7 days. This keeps a huge percent increase on a tiny base from looking like a large account.
 
-**Job change**
+| Rank | Requests in 7 days | Points | Why this rank |
+|---|---|---|---|
+| 1 | 40,000 or more | +8 | Production scale |
+| 2 | 20,000 to 39,999 | +5 | Real traffic |
+| 3 | 10,000 to 19,999 | +3 | Enough to matter |
+| 4 | Under 10,000 | 0 | The percent increase can be large on a small base |
 
-`arrived` means the person joined the row's account; `departed` means they left it and the seat is opening.
+**Ranking: severity hint.** A small adjustment. The payload still sets the score: Meridian at +354% labeled low outranks Cedar at +78% labeled high.
 
-| Title | Arrived | Departed (0.6 ×) |
-|---|---|---|
-| CTO, Head of AI | 78 | 46.8 |
-| VP Infrastructure, Director of ML Platform, Chief Architect | 68 | 40.8 |
-| Staff ML Engineer | 40 | 24 |
+| Rank | Hint | Points | Why this rank |
+|---|---|---|---|
+| 1 | High | +5 | The source marked it urgent |
+| 2 | Medium | 0 | No adjustment |
+| 3 | Low | −5 | The source marked it weak |
 
-**Usage volume** (requests in 7 days): ≥ 40k +8, ≥ 20k +5, ≥ 10k +3.
+### Fit rankings
 
-### Fit
+**Ranking: ARR.** Larger book, higher points. Missing ARR is neutral, not a rank.
 
-| ARR band | Points |
-|---|---|
-| `$250M+` | 90 |
-| `$50M-$250M` | 75 |
-| `$10M-$50M` | 60 |
-| `$1M-$10M` | 45 |
-| `<$1M` | 25 |
-| Not in CRM | 50 |
+| Rank | ARR band | Points | Why this rank |
+|---|---|---|---|
+| 1 | `$250M+` | 90 | Largest accounts. Inference spend can be a real line item |
+| 2 | `$50M-$250M` | 75 | Enterprise budget |
+| 3 | `$10M-$50M` | 60 | Mid-market, with room to grow |
+| 4 | `$1M-$10M` | 45 | Small, and real |
+| 5 | `<$1M` | 25 | Smallest book. A hot signal can still carry it |
+| — | Not in CRM | 50 | Unknown. Neutral, so missing ARR neither promotes nor buries the signal |
 
-| Industry | Points | Fireworks proof point |
-|---|---|---|
-| DevTools | 100 | Cursor, Sourcegraph, Vercel |
-| AI/ML | 88 | Genspark, rLLM, model builders |
-| HealthTech | 76 | Heidi Health |
-| Logistics | 70 | DoorDash, Uber |
-| Media | 58 | Quora |
-| Cybersecurity | 55 | Spend logic: high-volume classification workloads |
-| Telecom | 48 | Spend logic: support and contact-center volume (Cresta) |
-| FinTech | 36 | Regulated buyer; slower cycle |
-| E-commerce | 30 | Upwork, search and recommendations |
-| InsurTech | 28 | Regulated buyer; slower cycle |
-| HR Tech | 22 | |
-| LegalTech | 20 | |
-| Manufacturing | 18 | |
-| Education | 12 | |
-| Energy | 10 | |
-| Not in CRM | 40 | |
+**Ranking: industry.** Anchored on public Fireworks customers, not on how many accounts each industry has in this file. Missing industry is neutral, not a rank.
+
+| Rank | Industry | Points | Why this rank |
+|---|---|---|---|
+| 1 | DevTools | 100 | Closest to the product. Cursor, Sourcegraph, and Vercel run production inference on Fireworks |
+| 2 | AI/ML | 88 | Model builders, and usage grows with them. Genspark, rLLM |
+| 3 | HealthTech | 76 | Production clinical workload. Heidi Health |
+| 4 | Logistics | 70 | High request volume. DoorDash, Uber |
+| 5 | Media | 58 | Consumer-scale open models. Quora |
+| 6 | Cybersecurity | 55 | High-volume classification workloads |
+| 7 | Telecom | 48 | Support and contact-center volume. Cresta |
+| 8 | FinTech | 36 | Regulated buyer, slower cycle |
+| 9 | E-commerce | 30 | Search and recommendations. Upwork |
+| 10 | InsurTech | 28 | Regulated buyer, slower cycle |
+| 11 | HR Tech | 22 | No public Fireworks customer. Inference is a feature, not the product |
+| 12 | LegalTech | 20 | No public customer. Narrower purchase |
+| 13 | Manufacturing | 18 | No public customer. Little production model serving in this motion |
+| 14 | Education | 12 | No public customer. Low spend and a slow cycle |
+| 15 | Energy | 10 | No public customer. Weakest fit in this book |
+| — | Not in CRM | 40 | Unknown. Neutral, below the industries with a logo and above the bottom of the ladder |
 
 ## 4. Worked example: Caliber Robotics
 
@@ -188,16 +221,14 @@ Customer, Logistics, `$250M+`, US-Central Strategic. Rachel Park is OOO, so Dieg
 
 | Points | Line | Rule |
 |---|---|---|
-| +46.5 | Intent: fine-tuning platform (Harmonic, 0.48) | 77.4 × 1.00 stack × 0.60 |
-| | | 50 base + 14.4 intensity + 10 direct topic + 3 Harmonic + 0 medium |
-| +9.8 | Funding: Series C, $25M (2nd signal) | 65.5 × 0.25 stack × 0.60 |
-| | | 58 Series C + 2.5 amount + 5 high |
+| +46.5 | Intent: fine-tuning platform (Harmonic, 0.48) | 77.4 × 1.00 stack × 0.60<br>77.4 = 50 base + 14.4 intensity + 10 direct topic + 3 Harmonic + 0 medium |
+| +9.8 | Funding: Series C, $25M (2nd signal) | 65.5 × 0.25 stack × 0.60<br>65.5 = 58 Series C + 2.5 amount + 5 high |
 | +13.5 | ARR `$250M+` | 90 × 0.50 × 0.30 |
 | +10.5 | Industry: Logistics | 70 × 0.50 × 0.30 |
 | +6.9 | Recency: newest signal Aug 13 | 69.1 × 0.10 |
-| **87.2** | **Total, shown as 8.7** | |
+| **87.2** | **Total, shown as 8.7** | 46.5 + 9.8 + 13.5 + 10.5 + 6.9 |
 
-## 5. Ranking tradeoffs, from the real output
+## 5. Account ranking, from the real output
 
 | Account | List, rank | Why it lands there |
 |---|---|---|

@@ -58,8 +58,8 @@
       ],
       "status": "active",
       "capacity": 40,
-      "cards": 6,
-      "customers": 1,
+      "cards": 7,
+      "customers": 2,
       "prospects": 5
     },
     {
@@ -190,8 +190,8 @@
       ],
       "status": "active",
       "capacity": 22,
-      "cards": 2,
-      "customers": 1,
+      "cards": 1,
+      "customers": 0,
       "prospects": 1
     }
   ],
@@ -389,10 +389,10 @@
         "recency": 69.9
       },
       "owner": {
-        "id": "S12",
-        "name": "Chris Walsh"
+        "id": "S02",
+        "name": "Priya Shah"
       },
-      "route_reason": "Unmatched customer usage spike: senior rep in US-East, tier unknown",
+      "route_reason": "Unmatched signal: mid-market rep in US-East, tier unknown",
       "flags": [
         "Fit unknown: account not in CRM"
       ],
@@ -477,8 +477,8 @@
       "brief": "Meridian Robotics (meridianrobotics.ai) is not in the CRM yet; ARR and industry are unknown. What happened: Usage up 354% on /v1/chat/completions (40,160 requests in 7 days). Play: Expansion: usage is climbing. Offer a capacity and pricing review before they hit limits. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
       "email": {
         "subject": "Your Fireworks usage is up 354%",
-        "body": "Hi there,\n\nI noticed traffic on /v1/chat/completions is up 354% over baseline this week. Happy to review capacity, dedicated deployments, and pricing so the growth stays fast and predictable.\n\nBest,\nChris Walsh",
-        "mailto": "mailto:?subject=Your%20Fireworks%20usage%20is%20up%20354%25&body=Hi%20there%2C%0A%0AI%20noticed%20traffic%20on%20/v1/chat/completions%20is%20up%20354%25%20over%20baseline%20this%20week.%20Happy%20to%20review%20capacity%2C%20dedicated%20deployments%2C%20and%20pricing%20so%20the%20growth%20stays%20fast%20and%20predictable.%0A%0ABest%2C%0AChris%20Walsh"
+        "body": "Hi there,\n\nI noticed traffic on /v1/chat/completions is up 354% over baseline this week. Happy to review capacity, dedicated deployments, and pricing so the growth stays fast and predictable.\n\nBest,\nPriya Shah",
+        "mailto": "mailto:?subject=Your%20Fireworks%20usage%20is%20up%20354%25&body=Hi%20there%2C%0A%0AI%20noticed%20traffic%20on%20/v1/chat/completions%20is%20up%20354%25%20over%20baseline%20this%20week.%20Happy%20to%20review%20capacity%2C%20dedicated%20deployments%2C%20and%20pricing%20so%20the%20growth%20stays%20fast%20and%20predictable.%0A%0ABest%2C%0APriya%20Shah"
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Meridian%20Robotics,Website=meridianrobotics.ai",
       "slack": "Meridian Robotics scored 7.5 / 10. Usage up 354% on /v1/chat/completions (40,160 requests in 7 days). Expansion: usage is climbing. Offer a capacity and pricing review before they hit limits."
@@ -509,7 +509,7 @@
         "id": "S10",
         "name": "Hiro Tanaka"
       },
-      "route_reason": "Unmatched customer usage spike: senior rep in APAC, tier unknown",
+      "route_reason": "Unmatched signal: mid-market rep in APAC, tier unknown",
       "flags": [
         "Fit unknown: account not in CRM"
       ],
@@ -626,7 +626,7 @@
         "id": "S06",
         "name": "Diego Morales"
       },
-      "route_reason": "Unmatched customer usage spike: senior rep in US-Central, tier unknown",
+      "route_reason": "Unmatched signal: mid-market rep in US-Central, tier unknown",
       "flags": [
         "Fit unknown: account not in CRM"
       ],
@@ -842,7 +842,7 @@
         "id": "S10",
         "name": "Hiro Tanaka"
       },
-      "route_reason": "Unmatched customer usage spike: senior rep in APAC, tier unknown",
+      "route_reason": "Unmatched signal: mid-market rep in APAC, tier unknown",
       "flags": [
         "Fit unknown: account not in CRM"
       ],

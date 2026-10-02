@@ -126,12 +126,8 @@ class Router:
         region = card.region
 
         if not card.matched:
-            if card.is_customer:
-                pool = [s for s in self.active(region) if {"Strategic", "Enterprise"} & set(s.tiers)]
-                why = "Unmatched customer usage spike: senior rep in %s, tier unknown" % region
-            else:
-                pool = [s for s in self.active(region) if "Mid-Market" in s.tiers]
-                why = "Unmatched signal: mid-market rep in %s, tier unknown" % region
+            pool = [s for s in self.active(region) if "Mid-Market" in s.tiers]
+            why = "Unmatched signal: mid-market rep in %s, tier unknown" % region
             rep = self._pick(pool, card)
             if rep:
                 self.assign(card, rep, why)
