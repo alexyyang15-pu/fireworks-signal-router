@@ -78,7 +78,7 @@ def score_signal(signal: Signal, is_customer: bool) -> SignalScore:
             ("Topic: %s (%s)" % (topic, topic_kind), topic_pts),
             ("Source: %s" % source, W.INTENT_SOURCE_POINTS.get(source, 0)),
         ]
-        headline = 'Researching "%s" (%s, intensity %.2f)' % (topic, source, intensity)
+        headline = 'Researching "%s"' % topic
 
     elif t == "funding_event":
         rnd = d.get("round", "")
