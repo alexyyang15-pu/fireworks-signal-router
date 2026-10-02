@@ -18,10 +18,6 @@ TEMPLATE = r"""<!doctype html>
   .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 24px 64px; }
   header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
   h1 { margin: 0; font-size: 22px; letter-spacing: -0.01em; }
-  .legend { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-  .legend span { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 12px; color: var(--muted); }
-  .legend b { color: var(--ink); }
-
   .controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
               margin: 24px 0 16px; padding: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
   .tabs, .chips { display: flex; gap: 6px; align-items: center; }
@@ -114,10 +110,6 @@ TEMPLATE = r"""<!doctype html>
 <div class="wrap">
   <header>
     <h1>Signal Router</h1>
-    <div class="legend">
-      <span>Customers: <b>60%</b> signal &middot; <b>30%</b> fit &middot; <b>10%</b> recency</span>
-      <span>Prospects: <b>45%</b> signal &middot; <b>45%</b> fit &middot; <b>10%</b> recency</span>
-    </div>
   </header>
 
   <div class="controls">
