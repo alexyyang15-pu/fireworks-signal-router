@@ -16,7 +16,6 @@
   .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 24px 64px; }
   header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
   h1 { margin: 0; font-size: 22px; letter-spacing: -0.01em; }
-  .sub { color: var(--muted); margin-top: 4px; }
   .legend { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
   .legend span { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 12px; color: var(--muted); }
   .legend b { color: var(--ink); }
@@ -112,10 +111,7 @@
 <body>
 <div class="wrap">
   <header>
-    <div>
-      <h1>Signal Router</h1>
-      <div class="sub" id="sub"></div>
-    </div>
+    <h1>Signal Router</h1>
     <div class="legend">
       <span>Customers: <b>60%</b> signal &middot; <b>30%</b> fit &middot; <b>10%</b> recency</span>
       <span>Prospects: <b>45%</b> signal &middot; <b>45%</b> fit &middot; <b>10%</b> recency</span>
@@ -297,8 +293,6 @@ $("seller").addEventListener("change", (e) => {
   render();
 });
 
-const T = DATA.totals;
-$("sub").textContent = `${T.signals} signals from ${DATA.window[0]} to ${DATA.window[1]}, grouped into ${T.accounts} accounts. ${T.unmatched_signals} signals are not in the CRM. ${T.hold_queue} on hold.`;
 render();
 </script>
 </body>
