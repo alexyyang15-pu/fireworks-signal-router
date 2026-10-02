@@ -35,7 +35,7 @@ Scores signals **per account** and routes each account to one seller. Sellers se
 | 3 | Intent topic | 50 + intensity×30 + topic + source | **Topic = product fit:** inference, serving, or fine-tuning +10; RAG (adjacent) +4. **Source = confidence in the data:** G2 and 6sense +6 (purpose-built in-market data); Harmonic +3 (coverage, not evaluation); web traffic 0 (noisiest) |
 | 4 | New senior hire | CTO or Head of AI 78; VP or Director 68; Staff 40 | A new budget owner revisits the stack in their first 90 days. Staff engineers don't buy |
 | 5 | Funding | Series A 42 to Series D 66, + up to 15 for size | Budget timing, not intent |
-| 6 | Departure | customer 48, prospect 28 | A departure at a customer is a save play; at a prospect it is weak |
+| 6 | Departure | 0.6 × the same title's arrival points (CTO 47, Staff 24) | The seat will be refilled, but the buyer isn't there yet. An arrival can evaluate now, so it always outscores a departure |
 
 **Industry ladder** (DevTools 100 down to Energy 10) is anchored on public Fireworks customers (Cursor, Sourcegraph, Vercel, Heidi Health, DoorDash, Quora), not on how many accounts each industry has in the book.
 

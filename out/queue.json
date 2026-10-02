@@ -1268,107 +1268,8 @@
       "slack": "Hollow Labs scored 5.4 / 10. Raised Series B, $40M. Timing: fresh budget. Anchor on scaling inference cost as they grow."
     },
     {
-      "key": "A152",
-      "rank": 10,
-      "list": "customer",
-      "account_id": "A152",
-      "name": "Nook Flow",
-      "domain": "nookflow.co",
-      "region": "US-East",
-      "segment": "AI-Native",
-      "tier": "Mid-Market",
-      "industry": "FinTech",
-      "arr_band": "$1M-$10M",
-      "match": "account_id",
-      "score": 5.3,
-      "score_100": 52.7,
-      "components": {
-        "stacked_signals": 53.0,
-        "fit": 40.5,
-        "arr_points": 45,
-        "industry_points": 36,
-        "recency": 87.9
-      },
-      "owner": {
-        "id": "S02",
-        "name": "Priya Shah"
-      },
-      "route_reason": "US-East / Mid-Market",
-      "flags": [],
-      "signals": [
-        {
-          "signal_id": "SIG023",
-          "type": "job_change",
-          "timestamp": "2026-08-15T09:05:00Z",
-          "severity_hint": "high",
-          "headline": "Chief Architect Casey Garcia left (champion risk)",
-          "score": 53,
-          "parts": [
-            {
-              "label": "Departed at a customer: Chief Architect (save play)",
-              "points": 48
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ],
-          "detail": {
-            "person": "Casey Garcia",
-            "new_title": "Chief Architect",
-            "previous_company": "Ironwood Scale",
-            "direction": "departed"
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "Chief Architect Casey Garcia left (champion risk) (strongest signal)",
-          "points": 31.8,
-          "rule": "53.0 x 1.00 stack x 0.60 signal weight",
-          "parts": [
-            {
-              "label": "Departed at a customer: Chief Architect (save play)",
-              "points": 48
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ]
-        },
-        {
-          "label": "ARR $1M-$10M",
-          "points": 6.7,
-          "rule": "45 x 0.50 ARR share x 0.30 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry: FinTech",
-          "points": 5.4,
-          "rule": "36 x 0.50 industry share x 0.30 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 15",
-          "points": 8.8,
-          "rule": "87.9 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Risk: a champion left. Confirm who owns the relationship now.",
-      "brief": "Nook Flow: US-East existing customer, FinTech, $1M-$10M ARR, AI-Native segment. What happened: Chief Architect Casey Garcia left (champion risk). Play: Risk: a champion left. Confirm who owns the relationship now. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Staying aligned on Fireworks at Nook Flow",
-        "body": "Hi there,\n\nI saw Casey Garcia moved on. I want to make sure your team has the right Fireworks contact and nothing in flight is stalled.\n\nBest,\nPriya Shah",
-        "mailto": "mailto:?subject=Staying%20aligned%20on%20Fireworks%20at%20Nook%20Flow&body=Hi%20there%2C%0A%0AI%20saw%20Casey%20Garcia%20moved%20on.%20I%20want%20to%20make%20sure%20your%20team%20has%20the%20right%20Fireworks%20contact%20and%20nothing%20in%20flight%20is%20stalled.%0A%0ABest%2C%0APriya%20Shah"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A152/view",
-      "slack": "Nook Flow scored 5.3 / 10. Chief Architect Casey Garcia left (champion risk). Risk: a champion left. Confirm who owns the relationship now."
-    },
-    {
       "key": "A181",
-      "rank": 11,
+      "rank": 10,
       "list": "customer",
       "account_id": "A181",
       "name": "Quinoa Scale",
@@ -1474,7 +1375,7 @@
     },
     {
       "key": "A110",
-      "rank": 12,
+      "rank": 11,
       "list": "customer",
       "account_id": "A110",
       "name": "Helix Grid",
@@ -1486,9 +1387,9 @@
       "arr_band": "<$1M",
       "match": "account_id",
       "score": 5.0,
-      "score_100": 50.5,
+      "score_100": 49.8,
       "components": {
-        "stacked_signals": 43.0,
+        "stacked_signals": 41.8,
         "fit": 62.5,
         "arr_points": 25,
         "industry_points": 100,
@@ -1506,12 +1407,12 @@
           "type": "job_change",
           "timestamp": "2026-08-12T09:36:00Z",
           "severity_hint": "low",
-          "headline": "CTO Avery Nguyen left (champion risk)",
-          "score": 43,
+          "headline": "CTO Avery Nguyen left (champion risk, seat opening)",
+          "score": 41.8,
           "parts": [
             {
-              "label": "Departed at a customer: CTO (save play)",
-              "points": 48
+              "label": "Departed: CTO (78 x 0.6, seat opening)",
+              "points": 46.8
             },
             {
               "label": "Severity hint low",
@@ -1528,13 +1429,13 @@
       ],
       "breakdown": [
         {
-          "label": "CTO Avery Nguyen left (champion risk) (strongest signal)",
-          "points": 25.8,
-          "rule": "43.0 x 1.00 stack x 0.60 signal weight",
+          "label": "CTO Avery Nguyen left (champion risk, seat opening) (strongest signal)",
+          "points": 25.1,
+          "rule": "41.8 x 1.00 stack x 0.60 signal weight",
           "parts": [
             {
-              "label": "Departed at a customer: CTO (save play)",
-              "points": 48
+              "label": "Departed: CTO (78 x 0.6, seat opening)",
+              "points": 46.8
             },
             {
               "label": "Severity hint low",
@@ -1561,19 +1462,19 @@
           "parts": []
         }
       ],
-      "play": "Risk: a champion left. Confirm who owns the relationship now.",
-      "brief": "Helix Grid: US-Central existing customer, DevTools, <$1M ARR, AI-Native segment. What happened: CTO Avery Nguyen left (champion risk). Play: Risk: a champion left. Confirm who owns the relationship now. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "play": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
+      "brief": "Helix Grid: US-Central existing customer, DevTools, <$1M ARR, AI-Native segment. What happened: CTO Avery Nguyen left (champion risk, seat opening). Play: Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
       "email": {
-        "subject": "Staying aligned on Fireworks at Helix Grid",
-        "body": "Hi there,\n\nI saw Avery Nguyen moved on. I want to make sure your team has the right Fireworks contact and nothing in flight is stalled.\n\nBest,\nDiego Morales",
-        "mailto": "mailto:?subject=Staying%20aligned%20on%20Fireworks%20at%20Helix%20Grid&body=Hi%20there%2C%0A%0AI%20saw%20Avery%20Nguyen%20moved%20on.%20I%20want%20to%20make%20sure%20your%20team%20has%20the%20right%20Fireworks%20contact%20and%20nothing%20in%20flight%20is%20stalled.%0A%0ABest%2C%0ADiego%20Morales"
+        "subject": "Who is picking up AI infrastructure at Helix Grid?",
+        "body": "Hi there,\n\nI saw Avery Nguyen moved on from the CTO role. Who is picking up their inference and model infrastructure work? Happy to brief them. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nDiego Morales",
+        "mailto": "mailto:?subject=Who%20is%20picking%20up%20AI%20infrastructure%20at%20Helix%20Grid%3F&body=Hi%20there%2C%0A%0AI%20saw%20Avery%20Nguyen%20moved%20on%20from%20the%20CTO%20role.%20Who%20is%20picking%20up%20their%20inference%20and%20model%20infrastructure%20work%3F%20Happy%20to%20brief%20them.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ADiego%20Morales"
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A110/view",
-      "slack": "Helix Grid scored 5.0 / 10. CTO Avery Nguyen left (champion risk). Risk: a champion left. Confirm who owns the relationship now."
+      "slack": "Helix Grid scored 5.0 / 10. CTO Avery Nguyen left (champion risk, seat opening). Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early."
     },
     {
       "key": "A295",
-      "rank": 13,
+      "rank": 12,
       "list": "customer",
       "account_id": "A295",
       "name": "Garnet Networks",
@@ -1676,6 +1577,105 @@
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A295/view",
       "slack": "Garnet Networks scored 4.9 / 10. Raised Seed Extension, $25M. Timing: fresh budget. Anchor on scaling inference cost as they grow."
+    },
+    {
+      "key": "A152",
+      "rank": 13,
+      "list": "customer",
+      "account_id": "A152",
+      "name": "Nook Flow",
+      "domain": "nookflow.co",
+      "region": "US-East",
+      "segment": "AI-Native",
+      "tier": "Mid-Market",
+      "industry": "FinTech",
+      "arr_band": "$1M-$10M",
+      "match": "account_id",
+      "score": 4.8,
+      "score_100": 48.4,
+      "components": {
+        "stacked_signals": 45.8,
+        "fit": 40.5,
+        "arr_points": 45,
+        "industry_points": 36,
+        "recency": 87.9
+      },
+      "owner": {
+        "id": "S02",
+        "name": "Priya Shah"
+      },
+      "route_reason": "US-East / Mid-Market",
+      "flags": [],
+      "signals": [
+        {
+          "signal_id": "SIG023",
+          "type": "job_change",
+          "timestamp": "2026-08-15T09:05:00Z",
+          "severity_hint": "high",
+          "headline": "Chief Architect Casey Garcia left (champion risk, seat opening)",
+          "score": 45.8,
+          "parts": [
+            {
+              "label": "Departed: Chief Architect (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ],
+          "detail": {
+            "person": "Casey Garcia",
+            "new_title": "Chief Architect",
+            "previous_company": "Ironwood Scale",
+            "direction": "departed"
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "Chief Architect Casey Garcia left (champion risk, seat opening) (strongest signal)",
+          "points": 27.5,
+          "rule": "45.8 x 1.00 stack x 0.60 signal weight",
+          "parts": [
+            {
+              "label": "Departed: Chief Architect (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "label": "ARR $1M-$10M",
+          "points": 6.7,
+          "rule": "45 x 0.50 ARR share x 0.30 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry: FinTech",
+          "points": 5.4,
+          "rule": "36 x 0.50 industry share x 0.30 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 15",
+          "points": 8.8,
+          "rule": "87.9 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
+      "brief": "Nook Flow: US-East existing customer, FinTech, $1M-$10M ARR, AI-Native segment. What happened: Chief Architect Casey Garcia left (champion risk, seat opening). Play: Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Who is picking up AI infrastructure at Nook Flow?",
+        "body": "Hi there,\n\nI saw Casey Garcia moved on from the Chief Architect role. Who is picking up their inference and model infrastructure work? Happy to brief them. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nPriya Shah",
+        "mailto": "mailto:?subject=Who%20is%20picking%20up%20AI%20infrastructure%20at%20Nook%20Flow%3F&body=Hi%20there%2C%0A%0AI%20saw%20Casey%20Garcia%20moved%20on%20from%20the%20Chief%20Architect%20role.%20Who%20is%20picking%20up%20their%20inference%20and%20model%20infrastructure%20work%3F%20Happy%20to%20brief%20them.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0APriya%20Shah"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A152/view",
+      "slack": "Nook Flow scored 4.8 / 10. Chief Architect Casey Garcia left (champion risk, seat opening). Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early."
     },
     {
       "key": "A196",
@@ -3789,8 +3789,107 @@
       "slack": "Dolomite Systems scored 6.2 / 10. Researching \"GPU alternatives\". Education: they are researching what we sell. Send the matching proof point and offer a technical session."
     },
     {
-      "key": "A096",
+      "key": "A095",
       "rank": 17,
+      "list": "prospect",
+      "account_id": "A095",
+      "name": "Parallax Genomics",
+      "domain": "parallaxgenomics.io",
+      "region": "US-West",
+      "segment": "Enterprise-Expansion",
+      "tier": "Enterprise",
+      "industry": "Cybersecurity",
+      "arr_band": "$50M-$250M",
+      "match": "account_id",
+      "score": 6.2,
+      "score_100": 61.7,
+      "components": {
+        "stacked_signals": 51.8,
+        "fit": 65.0,
+        "arr_points": 75,
+        "industry_points": 55,
+        "recency": 91.6
+      },
+      "owner": {
+        "id": "S04",
+        "name": "Jordan Kim"
+      },
+      "route_reason": "US-West / Enterprise",
+      "flags": [],
+      "signals": [
+        {
+          "signal_id": "SIG041",
+          "type": "job_change",
+          "timestamp": "2026-08-15T18:27:00Z",
+          "severity_hint": "high",
+          "headline": "Head of AI Jordan Kim left (seat opening)",
+          "score": 51.8,
+          "parts": [
+            {
+              "label": "Departed: Head of AI (78 x 0.6, seat opening)",
+              "points": 46.8
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ],
+          "detail": {
+            "person": "Jordan Kim",
+            "new_title": "Head of AI",
+            "previous_company": "Kelp Defense",
+            "direction": "departed"
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "Head of AI Jordan Kim left (seat opening) (strongest signal)",
+          "points": 23.3,
+          "rule": "51.8 x 1.00 stack x 0.45 signal weight",
+          "parts": [
+            {
+              "label": "Departed: Head of AI (78 x 0.6, seat opening)",
+              "points": 46.8
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "label": "ARR $50M-$250M",
+          "points": 16.9,
+          "rule": "75 x 0.50 ARR share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry: Cybersecurity",
+          "points": 12.4,
+          "rule": "55 x 0.50 industry share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 15",
+          "points": 9.1,
+          "rule": "91.6 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
+      "brief": "Parallax Genomics: US-West prospect, Cybersecurity, $50M-$250M ARR, Enterprise-Expansion segment. What happened: Head of AI Jordan Kim left (seat opening). Play: Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Who is picking up AI infrastructure at Parallax Genomics?",
+        "body": "Hi there,\n\nI saw Jordan Kim moved on from the Head of AI role. Who is picking up their inference and model infrastructure work? Happy to brief them. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nJordan Kim",
+        "mailto": "mailto:?subject=Who%20is%20picking%20up%20AI%20infrastructure%20at%20Parallax%20Genomics%3F&body=Hi%20there%2C%0A%0AI%20saw%20Jordan%20Kim%20moved%20on%20from%20the%20Head%20of%20AI%20role.%20Who%20is%20picking%20up%20their%20inference%20and%20model%20infrastructure%20work%3F%20Happy%20to%20brief%20them.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0AJordan%20Kim"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A095/view",
+      "slack": "Parallax Genomics scored 6.2 / 10. Head of AI Jordan Kim left (seat opening). Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early."
+    },
+    {
+      "key": "A096",
+      "rank": 18,
       "list": "prospect",
       "account_id": "A096",
       "name": "Quill Flow",
@@ -3912,7 +4011,7 @@
     },
     {
       "key": "UNMATCHED:umbervision.com",
-      "rank": 18,
+      "rank": 19,
       "list": "prospect",
       "account_id": null,
       "name": "Umber Vision",
@@ -4021,7 +4120,7 @@
     },
     {
       "key": "UNMATCHED:pulsegrid.co",
-      "rank": 19,
+      "rank": 20,
       "list": "prospect",
       "account_id": null,
       "name": "Pulse Grid",
@@ -4145,7 +4244,7 @@
     },
     {
       "key": "UNMATCHED:lichencloud.dev",
-      "rank": 20,
+      "rank": 21,
       "list": "prospect",
       "account_id": null,
       "name": "Lichen Cloud",
@@ -4258,105 +4357,6 @@
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Lichen%20Cloud,Website=lichencloud.dev",
       "slack": "Lichen Cloud scored 5.5 / 10. Read Replicate docs (15 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
-    },
-    {
-      "key": "A095",
-      "rank": 21,
-      "list": "prospect",
-      "account_id": "A095",
-      "name": "Parallax Genomics",
-      "domain": "parallaxgenomics.io",
-      "region": "US-West",
-      "segment": "Enterprise-Expansion",
-      "tier": "Enterprise",
-      "industry": "Cybersecurity",
-      "arr_band": "$50M-$250M",
-      "match": "account_id",
-      "score": 5.3,
-      "score_100": 53.3,
-      "components": {
-        "stacked_signals": 33.0,
-        "fit": 65.0,
-        "arr_points": 75,
-        "industry_points": 55,
-        "recency": 91.6
-      },
-      "owner": {
-        "id": "S04",
-        "name": "Jordan Kim"
-      },
-      "route_reason": "US-West / Enterprise",
-      "flags": [],
-      "signals": [
-        {
-          "signal_id": "SIG041",
-          "type": "job_change",
-          "timestamp": "2026-08-15T18:27:00Z",
-          "severity_hint": "high",
-          "headline": "Head of AI Jordan Kim left",
-          "score": 33,
-          "parts": [
-            {
-              "label": "Departed at a prospect: Head of AI",
-              "points": 28
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ],
-          "detail": {
-            "person": "Jordan Kim",
-            "new_title": "Head of AI",
-            "previous_company": "Kelp Defense",
-            "direction": "departed"
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "Head of AI Jordan Kim left (strongest signal)",
-          "points": 14.8,
-          "rule": "33.0 x 1.00 stack x 0.45 signal weight",
-          "parts": [
-            {
-              "label": "Departed at a prospect: Head of AI",
-              "points": 28
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ]
-        },
-        {
-          "label": "ARR $50M-$250M",
-          "points": 16.9,
-          "rule": "75 x 0.50 ARR share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry: Cybersecurity",
-          "points": 12.4,
-          "rule": "55 x 0.50 industry share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 15",
-          "points": 9.2,
-          "rule": "91.6 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Risk: a champion left. Confirm who owns the relationship now.",
-      "brief": "Parallax Genomics: US-West prospect, Cybersecurity, $50M-$250M ARR, Enterprise-Expansion segment. What happened: Head of AI Jordan Kim left. Play: Risk: a champion left. Confirm who owns the relationship now. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Staying aligned on Fireworks at Parallax Genomics",
-        "body": "Hi there,\n\nI saw Jordan Kim moved on. I want to make sure your team has the right Fireworks contact and nothing in flight is stalled.\n\nBest,\nJordan Kim",
-        "mailto": "mailto:?subject=Staying%20aligned%20on%20Fireworks%20at%20Parallax%20Genomics&body=Hi%20there%2C%0A%0AI%20saw%20Jordan%20Kim%20moved%20on.%20I%20want%20to%20make%20sure%20your%20team%20has%20the%20right%20Fireworks%20contact%20and%20nothing%20in%20flight%20is%20stalled.%0A%0ABest%2C%0AJordan%20Kim"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A095/view",
-      "slack": "Parallax Genomics scored 5.3 / 10. Head of AI Jordan Kim left. Risk: a champion left. Confirm who owns the relationship now."
     },
     {
       "key": "UNMATCHED:larkhealth.dev",
@@ -4689,8 +4689,210 @@
       "slack": "Bastion Systems scored 4.9 / 10. Raised Series B, $15M. Timing: fresh budget. Anchor on scaling inference cost as they grow."
     },
     {
-      "key": "UNMATCHED:alabasterdata.io",
+      "key": "UNMATCHED:onyxgenomics.dev",
       "rank": 25,
+      "list": "prospect",
+      "account_id": null,
+      "name": "Onyx Genomics",
+      "domain": "onyxgenomics.dev",
+      "region": "US-East",
+      "segment": "Unknown",
+      "tier": "Unknown",
+      "industry": null,
+      "arr_band": null,
+      "match": "unmatched",
+      "score": 4.8,
+      "score_100": 48.5,
+      "components": {
+        "stacked_signals": 40.8,
+        "fit": 45.0,
+        "arr_points": 50,
+        "industry_points": 40,
+        "recency": 99.0
+      },
+      "owner": {
+        "id": "S02",
+        "name": "Priya Shah"
+      },
+      "route_reason": "Unmatched signal: mid-market rep in US-East, tier unknown",
+      "flags": [
+        "Fit unknown: account not in CRM"
+      ],
+      "signals": [
+        {
+          "signal_id": "SIG019",
+          "type": "job_change",
+          "timestamp": "2026-08-16T13:01:00Z",
+          "severity_hint": "medium",
+          "headline": "VP Infrastructure Avery Nguyen left (seat opening)",
+          "score": 40.8,
+          "parts": [
+            {
+              "label": "Departed: VP Infrastructure (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint medium",
+              "points": 0
+            }
+          ],
+          "detail": {
+            "person": "Avery Nguyen",
+            "new_title": "VP Infrastructure",
+            "previous_company": "Umber Systems",
+            "direction": "departed"
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "VP Infrastructure Avery Nguyen left (seat opening) (strongest signal)",
+          "points": 18.4,
+          "rule": "40.8 x 1.00 stack x 0.45 signal weight",
+          "parts": [
+            {
+              "label": "Departed: VP Infrastructure (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint medium",
+              "points": 0
+            }
+          ]
+        },
+        {
+          "label": "ARR unknown (not in CRM)",
+          "points": 11.2,
+          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry unknown (not in CRM)",
+          "points": 9.0,
+          "rule": "40 x 0.50 industry share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 16",
+          "points": 9.9,
+          "rule": "99.0 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
+      "brief": "Onyx Genomics (onyxgenomics.dev) is not in the CRM yet; ARR and industry are unknown. What happened: VP Infrastructure Avery Nguyen left (seat opening). Play: Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Who is picking up AI infrastructure at Onyx Genomics?",
+        "body": "Hi there,\n\nI saw Avery Nguyen moved on from the VP Infrastructure role. Who is picking up their inference and model infrastructure work? Happy to brief them. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nPriya Shah",
+        "mailto": "mailto:?subject=Who%20is%20picking%20up%20AI%20infrastructure%20at%20Onyx%20Genomics%3F&body=Hi%20there%2C%0A%0AI%20saw%20Avery%20Nguyen%20moved%20on%20from%20the%20VP%20Infrastructure%20role.%20Who%20is%20picking%20up%20their%20inference%20and%20model%20infrastructure%20work%3F%20Happy%20to%20brief%20them.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0APriya%20Shah"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Onyx%20Genomics,Website=onyxgenomics.dev",
+      "slack": "Onyx Genomics scored 4.8 / 10. VP Infrastructure Avery Nguyen left (seat opening). Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early."
+    },
+    {
+      "key": "UNMATCHED:vermilionflow.co",
+      "rank": 26,
+      "list": "prospect",
+      "account_id": null,
+      "name": "Vermilion Flow",
+      "domain": "vermilionflow.co",
+      "region": "US-East",
+      "segment": "Unknown",
+      "tier": "Unknown",
+      "industry": null,
+      "arr_band": null,
+      "match": "unmatched",
+      "score": 4.7,
+      "score_100": 46.8,
+      "components": {
+        "stacked_signals": 45.8,
+        "fit": 45.0,
+        "arr_points": 50,
+        "industry_points": 40,
+        "recency": 59.0
+      },
+      "owner": {
+        "id": "S02",
+        "name": "Priya Shah"
+      },
+      "route_reason": "Unmatched signal: mid-market rep in US-East, tier unknown",
+      "flags": [
+        "Fit unknown: account not in CRM"
+      ],
+      "signals": [
+        {
+          "signal_id": "SIG029",
+          "type": "job_change",
+          "timestamp": "2026-08-12T08:25:00Z",
+          "severity_hint": "high",
+          "headline": "VP Infrastructure Avery Garcia left (seat opening)",
+          "score": 45.8,
+          "parts": [
+            {
+              "label": "Departed: VP Infrastructure (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ],
+          "detail": {
+            "person": "Avery Garcia",
+            "new_title": "VP Infrastructure",
+            "previous_company": "Cedar Networks",
+            "direction": "departed"
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "VP Infrastructure Avery Garcia left (seat opening) (strongest signal)",
+          "points": 20.6,
+          "rule": "45.8 x 1.00 stack x 0.45 signal weight",
+          "parts": [
+            {
+              "label": "Departed: VP Infrastructure (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "label": "ARR unknown (not in CRM)",
+          "points": 11.3,
+          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry unknown (not in CRM)",
+          "points": 9.0,
+          "rule": "40 x 0.50 industry share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 12",
+          "points": 5.9,
+          "rule": "59.0 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
+      "brief": "Vermilion Flow (vermilionflow.co) is not in the CRM yet; ARR and industry are unknown. What happened: VP Infrastructure Avery Garcia left (seat opening). Play: Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Who is picking up AI infrastructure at Vermilion Flow?",
+        "body": "Hi there,\n\nI saw Avery Garcia moved on from the VP Infrastructure role. Who is picking up their inference and model infrastructure work? Happy to brief them. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nPriya Shah",
+        "mailto": "mailto:?subject=Who%20is%20picking%20up%20AI%20infrastructure%20at%20Vermilion%20Flow%3F&body=Hi%20there%2C%0A%0AI%20saw%20Avery%20Garcia%20moved%20on%20from%20the%20VP%20Infrastructure%20role.%20Who%20is%20picking%20up%20their%20inference%20and%20model%20infrastructure%20work%3F%20Happy%20to%20brief%20them.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0APriya%20Shah"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Vermilion%20Flow,Website=vermilionflow.co",
+      "slack": "Vermilion Flow scored 4.7 / 10. VP Infrastructure Avery Garcia left (seat opening). Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early."
+    },
+    {
+      "key": "UNMATCHED:alabasterdata.io",
+      "rank": 27,
       "list": "prospect",
       "account_id": null,
       "name": "Alabaster Data",
@@ -4790,8 +4992,109 @@
       "slack": "Alabaster Data scored 4.5 / 10. New Staff ML Engineer: Morgan Smith (from Slate Intelligence). New buyer: introduce Fireworks in their first 90 days, before vendors are locked in."
     },
     {
+      "key": "UNMATCHED:saffrongrid.ai",
+      "rank": 28,
+      "list": "prospect",
+      "account_id": null,
+      "name": "Saffron Grid",
+      "domain": "saffrongrid.ai",
+      "region": "US-West",
+      "segment": "Unknown",
+      "tier": "Unknown",
+      "industry": null,
+      "arr_band": null,
+      "match": "unmatched",
+      "score": 4.5,
+      "score_100": 44.6,
+      "components": {
+        "stacked_signals": 40.8,
+        "fit": 45.0,
+        "arr_points": 50,
+        "industry_points": 40,
+        "recency": 60.2
+      },
+      "owner": {
+        "id": "S05",
+        "name": "Sam Chen"
+      },
+      "route_reason": "Unmatched signal: mid-market rep in US-West, tier unknown",
+      "flags": [
+        "Fit unknown: account not in CRM"
+      ],
+      "signals": [
+        {
+          "signal_id": "SIG011",
+          "type": "job_change",
+          "timestamp": "2026-08-12T11:24:00Z",
+          "severity_hint": "medium",
+          "headline": "Chief Architect Riley Kim left (seat opening)",
+          "score": 40.8,
+          "parts": [
+            {
+              "label": "Departed: Chief Architect (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint medium",
+              "points": 0
+            }
+          ],
+          "detail": {
+            "person": "Riley Kim",
+            "new_title": "Chief Architect",
+            "previous_company": "Elm Pay",
+            "direction": "departed"
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "Chief Architect Riley Kim left (seat opening) (strongest signal)",
+          "points": 18.4,
+          "rule": "40.8 x 1.00 stack x 0.45 signal weight",
+          "parts": [
+            {
+              "label": "Departed: Chief Architect (68 x 0.6, seat opening)",
+              "points": 40.8
+            },
+            {
+              "label": "Severity hint medium",
+              "points": 0
+            }
+          ]
+        },
+        {
+          "label": "ARR unknown (not in CRM)",
+          "points": 11.2,
+          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry unknown (not in CRM)",
+          "points": 9.0,
+          "rule": "40 x 0.50 industry share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 12",
+          "points": 6.0,
+          "rule": "60.2 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
+      "brief": "Saffron Grid (saffrongrid.ai) is not in the CRM yet; ARR and industry are unknown. What happened: Chief Architect Riley Kim left (seat opening). Play: Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Who is picking up AI infrastructure at Saffron Grid?",
+        "body": "Hi there,\n\nI saw Riley Kim moved on from the Chief Architect role. Who is picking up their inference and model infrastructure work? Happy to brief them. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nSam Chen",
+        "mailto": "mailto:?subject=Who%20is%20picking%20up%20AI%20infrastructure%20at%20Saffron%20Grid%3F&body=Hi%20there%2C%0A%0AI%20saw%20Riley%20Kim%20moved%20on%20from%20the%20Chief%20Architect%20role.%20Who%20is%20picking%20up%20their%20inference%20and%20model%20infrastructure%20work%3F%20Happy%20to%20brief%20them.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ASam%20Chen"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Saffron%20Grid,Website=saffrongrid.ai",
+      "slack": "Saffron Grid scored 4.5 / 10. Chief Architect Riley Kim left (seat opening). Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early."
+    },
+    {
       "key": "UNMATCHED:urchinnetworks.io",
-      "rank": 26,
+      "rank": 29,
       "list": "prospect",
       "account_id": null,
       "name": "Urchin Networks",
@@ -4891,109 +5194,8 @@
       "slack": "Urchin Networks scored 4.3 / 10. New Staff ML Engineer: Avery Smith (from Bastion Systems). New buyer: introduce Fireworks in their first 90 days, before vendors are locked in."
     },
     {
-      "key": "UNMATCHED:onyxgenomics.dev",
-      "rank": 27,
-      "list": "prospect",
-      "account_id": null,
-      "name": "Onyx Genomics",
-      "domain": "onyxgenomics.dev",
-      "region": "US-East",
-      "segment": "Unknown",
-      "tier": "Unknown",
-      "industry": null,
-      "arr_band": null,
-      "match": "unmatched",
-      "score": 4.3,
-      "score_100": 42.7,
-      "components": {
-        "stacked_signals": 28.0,
-        "fit": 45.0,
-        "arr_points": 50,
-        "industry_points": 40,
-        "recency": 99.0
-      },
-      "owner": {
-        "id": "S02",
-        "name": "Priya Shah"
-      },
-      "route_reason": "Unmatched signal: mid-market rep in US-East, tier unknown",
-      "flags": [
-        "Fit unknown: account not in CRM"
-      ],
-      "signals": [
-        {
-          "signal_id": "SIG019",
-          "type": "job_change",
-          "timestamp": "2026-08-16T13:01:00Z",
-          "severity_hint": "medium",
-          "headline": "VP Infrastructure Avery Nguyen left",
-          "score": 28,
-          "parts": [
-            {
-              "label": "Departed at a prospect: VP Infrastructure",
-              "points": 28
-            },
-            {
-              "label": "Severity hint medium",
-              "points": 0
-            }
-          ],
-          "detail": {
-            "person": "Avery Nguyen",
-            "new_title": "VP Infrastructure",
-            "previous_company": "Umber Systems",
-            "direction": "departed"
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "VP Infrastructure Avery Nguyen left (strongest signal)",
-          "points": 12.6,
-          "rule": "28.0 x 1.00 stack x 0.45 signal weight",
-          "parts": [
-            {
-              "label": "Departed at a prospect: VP Infrastructure",
-              "points": 28
-            },
-            {
-              "label": "Severity hint medium",
-              "points": 0
-            }
-          ]
-        },
-        {
-          "label": "ARR unknown (not in CRM)",
-          "points": 11.2,
-          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry unknown (not in CRM)",
-          "points": 9.0,
-          "rule": "40 x 0.50 industry share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 16",
-          "points": 9.9,
-          "rule": "99.0 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Risk: a champion left. Confirm who owns the relationship now.",
-      "brief": "Onyx Genomics (onyxgenomics.dev) is not in the CRM yet; ARR and industry are unknown. What happened: VP Infrastructure Avery Nguyen left. Play: Risk: a champion left. Confirm who owns the relationship now. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Staying aligned on Fireworks at Onyx Genomics",
-        "body": "Hi there,\n\nI saw Avery Nguyen moved on. I want to make sure your team has the right Fireworks contact and nothing in flight is stalled.\n\nBest,\nPriya Shah",
-        "mailto": "mailto:?subject=Staying%20aligned%20on%20Fireworks%20at%20Onyx%20Genomics&body=Hi%20there%2C%0A%0AI%20saw%20Avery%20Nguyen%20moved%20on.%20I%20want%20to%20make%20sure%20your%20team%20has%20the%20right%20Fireworks%20contact%20and%20nothing%20in%20flight%20is%20stalled.%0A%0ABest%2C%0APriya%20Shah"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Onyx%20Genomics,Website=onyxgenomics.dev",
-      "slack": "Onyx Genomics scored 4.3 / 10. VP Infrastructure Avery Nguyen left. Risk: a champion left. Confirm who owns the relationship now."
-    },
-    {
       "key": "A047",
-      "rank": 28,
+      "rank": 30,
       "list": "prospect",
       "account_id": "A047",
       "name": "Tundra Labs",
@@ -5098,208 +5300,6 @@
       "slack": "Tundra Labs scored 4.1 / 10. Raised Series A, $25M. Timing: fresh budget. Anchor on scaling inference cost as they grow."
     },
     {
-      "key": "UNMATCHED:vermilionflow.co",
-      "rank": 29,
-      "list": "prospect",
-      "account_id": null,
-      "name": "Vermilion Flow",
-      "domain": "vermilionflow.co",
-      "region": "US-East",
-      "segment": "Unknown",
-      "tier": "Unknown",
-      "industry": null,
-      "arr_band": null,
-      "match": "unmatched",
-      "score": 4.1,
-      "score_100": 41.0,
-      "components": {
-        "stacked_signals": 33.0,
-        "fit": 45.0,
-        "arr_points": 50,
-        "industry_points": 40,
-        "recency": 59.0
-      },
-      "owner": {
-        "id": "S02",
-        "name": "Priya Shah"
-      },
-      "route_reason": "Unmatched signal: mid-market rep in US-East, tier unknown",
-      "flags": [
-        "Fit unknown: account not in CRM"
-      ],
-      "signals": [
-        {
-          "signal_id": "SIG029",
-          "type": "job_change",
-          "timestamp": "2026-08-12T08:25:00Z",
-          "severity_hint": "high",
-          "headline": "VP Infrastructure Avery Garcia left",
-          "score": 33,
-          "parts": [
-            {
-              "label": "Departed at a prospect: VP Infrastructure",
-              "points": 28
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ],
-          "detail": {
-            "person": "Avery Garcia",
-            "new_title": "VP Infrastructure",
-            "previous_company": "Cedar Networks",
-            "direction": "departed"
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "VP Infrastructure Avery Garcia left (strongest signal)",
-          "points": 14.9,
-          "rule": "33.0 x 1.00 stack x 0.45 signal weight",
-          "parts": [
-            {
-              "label": "Departed at a prospect: VP Infrastructure",
-              "points": 28
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ]
-        },
-        {
-          "label": "ARR unknown (not in CRM)",
-          "points": 11.2,
-          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry unknown (not in CRM)",
-          "points": 9.0,
-          "rule": "40 x 0.50 industry share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 12",
-          "points": 5.9,
-          "rule": "59.0 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Risk: a champion left. Confirm who owns the relationship now.",
-      "brief": "Vermilion Flow (vermilionflow.co) is not in the CRM yet; ARR and industry are unknown. What happened: VP Infrastructure Avery Garcia left. Play: Risk: a champion left. Confirm who owns the relationship now. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Staying aligned on Fireworks at Vermilion Flow",
-        "body": "Hi there,\n\nI saw Avery Garcia moved on. I want to make sure your team has the right Fireworks contact and nothing in flight is stalled.\n\nBest,\nPriya Shah",
-        "mailto": "mailto:?subject=Staying%20aligned%20on%20Fireworks%20at%20Vermilion%20Flow&body=Hi%20there%2C%0A%0AI%20saw%20Avery%20Garcia%20moved%20on.%20I%20want%20to%20make%20sure%20your%20team%20has%20the%20right%20Fireworks%20contact%20and%20nothing%20in%20flight%20is%20stalled.%0A%0ABest%2C%0APriya%20Shah"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Vermilion%20Flow,Website=vermilionflow.co",
-      "slack": "Vermilion Flow scored 4.1 / 10. VP Infrastructure Avery Garcia left. Risk: a champion left. Confirm who owns the relationship now."
-    },
-    {
-      "key": "UNMATCHED:saffrongrid.ai",
-      "rank": 30,
-      "list": "prospect",
-      "account_id": null,
-      "name": "Saffron Grid",
-      "domain": "saffrongrid.ai",
-      "region": "US-West",
-      "segment": "Unknown",
-      "tier": "Unknown",
-      "industry": null,
-      "arr_band": null,
-      "match": "unmatched",
-      "score": 3.9,
-      "score_100": 38.9,
-      "components": {
-        "stacked_signals": 28.0,
-        "fit": 45.0,
-        "arr_points": 50,
-        "industry_points": 40,
-        "recency": 60.2
-      },
-      "owner": {
-        "id": "S05",
-        "name": "Sam Chen"
-      },
-      "route_reason": "Unmatched signal: mid-market rep in US-West, tier unknown",
-      "flags": [
-        "Fit unknown: account not in CRM"
-      ],
-      "signals": [
-        {
-          "signal_id": "SIG011",
-          "type": "job_change",
-          "timestamp": "2026-08-12T11:24:00Z",
-          "severity_hint": "medium",
-          "headline": "Chief Architect Riley Kim left",
-          "score": 28,
-          "parts": [
-            {
-              "label": "Departed at a prospect: Chief Architect",
-              "points": 28
-            },
-            {
-              "label": "Severity hint medium",
-              "points": 0
-            }
-          ],
-          "detail": {
-            "person": "Riley Kim",
-            "new_title": "Chief Architect",
-            "previous_company": "Elm Pay",
-            "direction": "departed"
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "Chief Architect Riley Kim left (strongest signal)",
-          "points": 12.6,
-          "rule": "28.0 x 1.00 stack x 0.45 signal weight",
-          "parts": [
-            {
-              "label": "Departed at a prospect: Chief Architect",
-              "points": 28
-            },
-            {
-              "label": "Severity hint medium",
-              "points": 0
-            }
-          ]
-        },
-        {
-          "label": "ARR unknown (not in CRM)",
-          "points": 11.3,
-          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry unknown (not in CRM)",
-          "points": 9.0,
-          "rule": "40 x 0.50 industry share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 12",
-          "points": 6.0,
-          "rule": "60.2 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Risk: a champion left. Confirm who owns the relationship now.",
-      "brief": "Saffron Grid (saffrongrid.ai) is not in the CRM yet; ARR and industry are unknown. What happened: Chief Architect Riley Kim left. Play: Risk: a champion left. Confirm who owns the relationship now. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Staying aligned on Fireworks at Saffron Grid",
-        "body": "Hi there,\n\nI saw Riley Kim moved on. I want to make sure your team has the right Fireworks contact and nothing in flight is stalled.\n\nBest,\nSam Chen",
-        "mailto": "mailto:?subject=Staying%20aligned%20on%20Fireworks%20at%20Saffron%20Grid&body=Hi%20there%2C%0A%0AI%20saw%20Riley%20Kim%20moved%20on.%20I%20want%20to%20make%20sure%20your%20team%20has%20the%20right%20Fireworks%20contact%20and%20nothing%20in%20flight%20is%20stalled.%0A%0ABest%2C%0ASam%20Chen"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Saffron%20Grid,Website=saffrongrid.ai",
-      "slack": "Saffron Grid scored 3.9 / 10. Chief Architect Riley Kim left. Risk: a champion left. Confirm who owns the relationship now."
-    },
-    {
       "key": "A221",
       "rank": 31,
       "list": "prospect",
@@ -5312,10 +5312,10 @@
       "industry": "Energy",
       "arr_band": "$50M-$250M",
       "match": "account_id",
-      "score": 3.6,
-      "score_100": 35.8,
+      "score": 3.4,
+      "score_100": 34.0,
       "components": {
-        "stacked_signals": 28.0,
+        "stacked_signals": 24.0,
         "fit": 42.5,
         "arr_points": 75,
         "industry_points": 10,
@@ -5333,12 +5333,12 @@
           "type": "job_change",
           "timestamp": "2026-08-10T09:33:00Z",
           "severity_hint": "medium",
-          "headline": "Staff ML Engineer Casey Nguyen left",
-          "score": 28,
+          "headline": "Staff ML Engineer Casey Nguyen left (seat opening)",
+          "score": 24.0,
           "parts": [
             {
-              "label": "Departed at a prospect: Staff ML Engineer",
-              "points": 28
+              "label": "Departed: Staff ML Engineer (40 x 0.6, seat opening)",
+              "points": 24.0
             },
             {
               "label": "Severity hint medium",
@@ -5355,13 +5355,13 @@
       ],
       "breakdown": [
         {
-          "label": "Staff ML Engineer Casey Nguyen left (strongest signal)",
-          "points": 12.6,
-          "rule": "28.0 x 1.00 stack x 0.45 signal weight",
+          "label": "Staff ML Engineer Casey Nguyen left (seat opening) (strongest signal)",
+          "points": 10.8,
+          "rule": "24.0 x 1.00 stack x 0.45 signal weight",
           "parts": [
             {
-              "label": "Departed at a prospect: Staff ML Engineer",
-              "points": 28
+              "label": "Departed: Staff ML Engineer (40 x 0.6, seat opening)",
+              "points": 24.0
             },
             {
               "label": "Severity hint medium",
@@ -5388,15 +5388,15 @@
           "parts": []
         }
       ],
-      "play": "Risk: a champion left. Confirm who owns the relationship now.",
-      "brief": "Sentinel Mind: EMEA prospect, Energy, $50M-$250M ARR, Enterprise-Expansion segment. What happened: Staff ML Engineer Casey Nguyen left. Play: Risk: a champion left. Confirm who owns the relationship now. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "play": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
+      "brief": "Sentinel Mind: EMEA prospect, Energy, $50M-$250M ARR, Enterprise-Expansion segment. What happened: Staff ML Engineer Casey Nguyen left (seat opening). Play: Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
       "email": {
-        "subject": "Staying aligned on Fireworks at Sentinel Mind",
-        "body": "Hi there,\n\nI saw Casey Nguyen moved on. I want to make sure your team has the right Fireworks contact and nothing in flight is stalled.\n\nBest,\nTom O'Brien",
-        "mailto": "mailto:?subject=Staying%20aligned%20on%20Fireworks%20at%20Sentinel%20Mind&body=Hi%20there%2C%0A%0AI%20saw%20Casey%20Nguyen%20moved%20on.%20I%20want%20to%20make%20sure%20your%20team%20has%20the%20right%20Fireworks%20contact%20and%20nothing%20in%20flight%20is%20stalled.%0A%0ABest%2C%0ATom%20O%27Brien"
+        "subject": "Who is picking up AI infrastructure at Sentinel Mind?",
+        "body": "Hi there,\n\nI saw Casey Nguyen moved on from the Staff ML Engineer role. Who is picking up their inference and model infrastructure work? Happy to brief them. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nTom O'Brien",
+        "mailto": "mailto:?subject=Who%20is%20picking%20up%20AI%20infrastructure%20at%20Sentinel%20Mind%3F&body=Hi%20there%2C%0A%0AI%20saw%20Casey%20Nguyen%20moved%20on%20from%20the%20Staff%20ML%20Engineer%20role.%20Who%20is%20picking%20up%20their%20inference%20and%20model%20infrastructure%20work%3F%20Happy%20to%20brief%20them.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ATom%20O%27Brien"
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A221/view",
-      "slack": "Sentinel Mind scored 3.6 / 10. Staff ML Engineer Casey Nguyen left. Risk: a champion left. Confirm who owns the relationship now."
+      "slack": "Sentinel Mind scored 3.4 / 10. Staff ML Engineer Casey Nguyen left (seat opening). Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early."
     }
   ]
 }

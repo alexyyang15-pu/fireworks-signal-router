@@ -113,7 +113,7 @@ Every signal also gets the **severity hint: high +5, medium 0, low −5**.
 | Intent | 50 + intensity × 30 + topic + source | 71 to 89 |
 | Competitor | action + competitor + freshness | 44 to 95 |
 | Funding | round + min(15, $M / 10) | 35 to 74 |
-| Job change | title points (arrival) or flat (departure) | 28 to 73 |
+| Job change | title points (arrival) or 0.6 × title points (departure) | 24 to 73 |
 
 **Intent topic and source**
 
@@ -142,13 +142,13 @@ Plus `min(15, amount_usd_m / 10)`.
 
 **Job change**
 
-| Change | Points |
-|---|---|
-| Arrived: CTO, Head of AI | 78 |
-| Arrived: VP Infrastructure, Director of ML Platform, Chief Architect | 68 |
-| Arrived: Staff ML Engineer | 40 |
-| Departed at a customer (save play) | 48 |
-| Departed at a prospect | 28 |
+`arrived` means the person joined the row's account; `departed` means they left it and the seat is opening.
+
+| Title | Arrived | Departed (0.6 ×) |
+|---|---|---|
+| CTO, Head of AI | 78 | 46.8 |
+| VP Infrastructure, Director of ML Platform, Chief Architect | 68 | 40.8 |
+| Staff ML Engineer | 40 | 24 |
 
 **Usage volume** (requests in 7 days): ≥ 40k +8, ≥ 20k +5, ≥ 10k +3.
 

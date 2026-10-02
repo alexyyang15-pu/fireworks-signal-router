@@ -11,7 +11,7 @@ PLAYS = {
     "competitor_evaluation": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
     "intent_topic": "Education: they are researching what we sell. Send the matching proof point and offer a technical session.",
     "job_change_arrived": "New buyer: introduce Fireworks in their first 90 days, before vendors are locked in.",
-    "job_change_departed": "Risk: a champion left. Confirm who owns the relationship now.",
+    "job_change_departed": "Seat opening: a leader left. Find who owns the decision now and get in front of their replacement early.",
     "funding_event": "Timing: fresh budget. Anchor on scaling inference cost as they grow.",
 }
 
@@ -100,10 +100,10 @@ def email(card: Card) -> dict:
             "%s. Open to comparing notes?" % (d.get("new_title", "a new leader"), proof)
         )
     elif top.signal_type == "job_change":
-        subject = "Staying aligned on Fireworks at %s" % card.name
+        subject = "Who is picking up AI infrastructure at %s?" % card.name
         hook = (
-            "I saw %s moved on. I want to make sure your team has the right Fireworks contact and "
-            "nothing in flight is stalled." % d.get("person", "a teammate")
+            "I saw %s moved on from the %s role. Who is picking up their inference and model "
+            "infrastructure work? Happy to brief them. %s." % (d.get("person", "a teammate"), d.get("new_title", "platform"), proof)
         )
     else:
         subject = "Congrats on the %s" % d.get("round", "raise")
