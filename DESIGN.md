@@ -33,13 +33,12 @@ Scores signals **per account** and routes each account to one seller. Sellers se
 | 1 | Usage spike | 70 + growth + volume | Observed usage on a paying customer: a fact, not an inference |
 | 2 | Competitor evaluation | pricing page 82 to benchmark download 46, plus freshness | Active vendor shopping. Together AI, Replicate, and Anyscale get +6 over OpenAI because that deal is winnable on price and speed |
 | 3 | Intent topic | 50 + intensity×30 + topic + source | **Topic = product fit:** inference, serving, or fine-tuning +10; RAG (adjacent) +4. **Source = confidence in the data:** G2 and 6sense +6 (purpose-built in-market data); Harmonic +3 (coverage, not evaluation); web traffic 0 (noisiest) |
-| 4 | New senior hire | CTO or Head of AI 78; VP or Director 68; Staff 40 | A new budget owner revisits the stack in their first 90 days. Staff engineers don't buy |
+| 4 | New senior hire | CTO or Head of AI 78; VP or Director 68; Staff 40 | A new budget owner revisits the stack in their first 90 days. Staff engineers don't buy. The row's account is where the person joined; "departed" refers to their previous company |
 | 5 | Funding | Series A 42 to Series D 66, + up to 15 for size | Budget timing, not intent |
-| 6 | Departure | customer 48, prospect 28 | A departure at a customer is a save play; at a prospect it is weak |
 
 **Industry ladder** (DevTools 100 down to Energy 10) is anchored on public Fireworks customers (Cursor, Sourcegraph, Vercel, Heidi Health, DoorDash, Quora), not on how many accounts each industry has in the book.
 
-**Known tradeoff:** at 45/45, strong fit can carry a weak signal. Alabaster Mind (DevTools, `$250M+`, one funding event) is #6, ahead of Iris Secure (a Together AI comparison 4 days ago, but not in the CRM).
+**Known tradeoff:** at 45/45, strong fit can carry a weak signal. Alabaster Mind (DevTools, `$250M+`, one funding event) is #7, ahead of Iris Secure (a Together AI comparison 4 days ago, but not in the CRM).
 
 ## Failure modes: where this breaks first
 

@@ -105,17 +105,11 @@ def score_signal(signal: Signal, is_customer: bool) -> SignalScore:
         headline = "%s (%d days since last signal)" % (verb % competitor, days)
 
     elif t == "job_change":
-        title, direction = d.get("new_title", ""), d.get("direction", "")
+        # The row's account is where the person landed; "departed" refers to previous_company.
+        title = d.get("new_title", "")
         person, prev = d.get("person", ""), d.get("previous_company", "")
-        if direction == "arrived":
-            parts = [("Arrived: %s" % title, W.JOB_ARRIVAL_POINTS.get(title, W.JOB_ARRIVAL_DEFAULT))]
-            headline = "New %s: %s (from %s)" % (title, person, prev)
-        elif is_customer:
-            parts = [("Departed at a customer: %s (save play)" % title, W.JOB_DEPARTURE_CUSTOMER)]
-            headline = "%s %s left (champion risk)" % (title, person)
-        else:
-            parts = [("Departed at a prospect: %s" % title, W.JOB_DEPARTURE_PROSPECT)]
-            headline = "%s %s left" % (title, person)
+        parts = [("New hire: %s" % title, W.JOB_TITLE_POINTS.get(title, W.JOB_TITLE_DEFAULT))]
+        headline = "New %s: %s (joined from %s)" % (title, person, prev)
 
     elif t == "usage_spike":
         pct = float(d.get("pct_increase_vs_baseline", 0))
