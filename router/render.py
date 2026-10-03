@@ -8,41 +8,49 @@ TEMPLATE = r"""<!doctype html>
 <title>Signal Router | Fireworks</title>
 <style>
   :root {
-    --bg: #f6f5f2; --panel: #ffffff; --ink: #1d1b19; --muted: #6b665f; --line: #e6e2db;
-    --accent: #6d28d9; --accent-soft: #f1ebfd; --good: #157f4b; --good-soft: #e6f4ec;
+    --bg: #f7f7f8; --panel: #ffffff; --ink: #16181d; --muted: #6b7280; --line: #e4e4e7;
+    --accent: #6726fe; --accent-soft: #f0eaff; --good: #157f4b; --good-soft: #e6f4ec;
     --warn: #a15c07; --warn-soft: #fbf0df; --cold: #55606e; --cold-soft: #eef0f3;
+    --mono: "Favorit", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
-  .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 24px 64px; }
-  header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
-  h1 { margin: 0; font-size: 22px; letter-spacing: -0.01em; }
+         font: 14px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px 64px; }
+  header { background: var(--ink); color: #fff; border-bottom: 3px solid var(--accent); margin: 0 -24px;
+           padding: 30px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+  h1 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -0.02em; color: #fff;
+       display: inline-flex; align-items: center; gap: 12px; }
+  h1::before { content: ""; width: 14px; height: 14px; background: var(--accent); }
   .controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-              margin: 24px 0 16px; padding: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+              margin: 24px 0 16px; padding: 12px; background: var(--panel); border: 1px solid var(--line); }
   .tabs, .chips { display: flex; gap: 6px; align-items: center; }
-  .tab, .chip { border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 8px;
-                padding: 7px 14px; cursor: pointer; font: inherit; display: inline-flex; align-items: center; gap: 8px; }
+  .tab, .chip { border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+                padding: 8px 14px; cursor: pointer; font-family: var(--mono); font-size: 11px; font-weight: 600;
+                text-transform: uppercase; letter-spacing: .06em; display: inline-flex; align-items: center; gap: 8px; }
   .tab.on { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .chip { padding: 5px 11px; font-size: 13px; }
+  .chip { padding: 6px 11px; }
   .chip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
-  .count { font-size: 12px; opacity: .75; }
-  select { font: inherit; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); }
-  label.viewas { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); }
+  .chiplabel { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 2px 0 10px; }
+  .chiplabel:first-child { margin-left: 0; }
+  .count { font-size: 10px; opacity: .75; }
+  select { font: inherit; padding: 7px 10px; border: 1px solid var(--line); background: var(--panel); }
+  label.viewas { display: inline-flex; align-items: center; gap: 8px; color: var(--muted);
+                 font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; }
 
   .layout { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 20px; align-items: start; }
   @media (max-width: 1000px) { .layout { grid-template-columns: 1fr; } .side { position: static !important; } }
 
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; }
+  .card { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px; margin-bottom: 12px; }
   .card.sel { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
   .head { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 14px; align-items: center; cursor: pointer; }
-  .score { width: 64px; height: 64px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-  .score b { font-size: 22px; line-height: 1; }
-  .score small { font-size: 10px; margin-top: 4px; letter-spacing: .04em; text-transform: uppercase; }
-  .hot { background: var(--good-soft); color: var(--good); }
+  .score { width: 64px; height: 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .score b { font-size: 22px; line-height: 1; font-weight: 600; }
+  .score small { font-family: var(--mono); font-size: 9px; margin-top: 4px; letter-spacing: .08em; text-transform: uppercase; }
+  .hot { background: var(--accent-soft); color: var(--accent); }
   .warm { background: var(--warn-soft); color: var(--warn); }
   .cool { background: var(--cold-soft); color: var(--cold); }
-  .title h3 { margin: 0; font-size: 16px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .title h3 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .rank { color: var(--muted); font-weight: 500; font-size: 13px; }
   .meta { color: var(--muted); font-size: 13px; margin-top: 2px; }
   .owner { text-align: right; font-size: 12px; color: var(--muted); }
@@ -50,20 +58,23 @@ TEMPLATE = r"""<!doctype html>
 
   .signals { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; }
   .signals li { display: grid; grid-template-columns: 150px minmax(0, 1fr) 56px 56px; gap: 10px; align-items: center;
-                padding: 7px 10px; background: var(--bg); border-radius: 8px; }
-  .type { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); font-weight: 600; text-align: center;
-          background: var(--accent-soft); border-radius: 6px; padding: 3px 6px; }
+                padding: 7px 10px; background: var(--bg); }
+  .signals li.match { background: var(--accent-soft); box-shadow: inset 2px 0 0 var(--accent); }
+  .type { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); font-weight: 600; text-align: center;
+          background: var(--accent-soft); padding: 3px 6px; }
   .sigscore { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
   .sigdate { text-align: right; color: var(--muted); font-size: 13px; white-space: nowrap; }
 
   .flags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
-  .flag { font-size: 12px; background: var(--warn-soft); color: var(--warn); border-radius: 999px; padding: 3px 10px; }
+  .flag { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .05em;
+          background: var(--warn-soft); color: var(--warn); padding: 4px 8px; }
 
   .actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; justify-content: flex-start; }
-  .btn { border: 1px solid var(--line); background: var(--panel); border-radius: 8px; padding: 7px 12px; cursor: pointer;
-         font: inherit; font-size: 13px; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+  .btn { border: 1px solid var(--line); background: var(--panel); padding: 8px 14px; cursor: pointer;
+         font-family: var(--mono); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em;
+         color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
   .btn:hover { border-color: var(--ink); }
-  .btn.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .btn.on { background: var(--accent); color: #fff; border-color: var(--accent); }
   .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
 
   .panel { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 12px; }
@@ -77,10 +88,10 @@ TEMPLATE = r"""<!doctype html>
   .route { color: var(--muted); font-size: 13px; margin-top: 10px; }
   .brief { margin: 0; }
   .email label { display: block; font-size: 12px; color: var(--muted); margin: 6px 0 4px; }
-  .email input, .email textarea { width: 100%; font: inherit; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: var(--bg); }
+  .email input, .email textarea { width: 100%; font: inherit; border: 1px solid var(--line); padding: 8px 10px; background: var(--bg); }
   .email textarea { min-height: 170px; resize: vertical; }
   .email .actions { justify-content: flex-end; }
-  .empty { text-align: center; color: var(--muted); padding: 48px 0; background: var(--panel); border: 1px dashed var(--line); border-radius: 14px; }
+  .empty { text-align: center; color: var(--muted); padding: 48px 0; background: var(--panel); border: 1px dashed var(--line); }
 
   .side { position: sticky; top: 16px; display: grid; gap: 16px; }
   .slack { background: #1a1d21; color: #d1d2d3; border-radius: 12px; overflow: hidden; border: 1px solid #2c2d30; }
@@ -129,27 +140,32 @@ TEMPLATE = r"""<!doctype html>
 
 <script>
 const DATA = __DATA__;
-const state = { list: "customer", segment: "all", seller: "all", selected: null, open: {}, pop: false };
+const state = { list: "customer", segment: "all", sigType: "all", seller: "all", selected: null, open: {}, pop: false };
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const heat = (score) => score >= 8 ? "hot" : score >= 6.5 ? "warm" : "cool";
 const fmtDate = (iso) => new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
 const pts = (p) => (p >= 0 ? "+" : "\u2212") + Math.abs(p).toFixed(1);
 const TYPE = { usage_spike: "Usage spike", competitor_evaluation: "Competitor", intent_topic: "Intent", job_change: "Job change", funding_event: "Funding" };
+const SF_LOGO = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path fill="#00A1E0" d="M10.9 6.1a4.6 4.6 0 0 1 4.4-2.6 5 5 0 0 1 4.7 3.2 4.2 4.2 0 0 1 1.7 8H6.4a3.9 3.9 0 0 1-1.6-7.4 4.9 4.9 0 0 1 6.1-1.2z"/></svg>`;
 const SEGMENTS = [["all", "All"], ["AI-Native", "AI-Native"], ["Enterprise-Expansion", "Enterprise Expansion"], ["Unknown", "Not in CRM"]];
+const SIG_TYPES = [["all", "All"], ["usage_spike", "Usage spike"], ["competitor_evaluation", "Competitor"], ["intent_topic", "Intent"], ["job_change", "Job change"], ["funding_event", "Funding"]];
 
 function visible(list) {
   return DATA.cards.filter((c) =>
     c.list === list &&
     (state.seller === "all" || (c.owner && c.owner.id === state.seller)) &&
-    (state.segment === "all" || c.segment === state.segment));
+    (state.segment === "all" || c.segment === state.segment) &&
+    (state.sigType === "all" || c.signals.some((s) => s.type === state.sigType)));
 }
 
 function renderControls() {
   $("tabs").innerHTML = [["customer", "Customers"], ["prospect", "Prospects"]].map(([k, label]) =>
     `<button class="tab ${state.list === k ? "on" : ""}" data-list="${k}">${label} <span class="count">${visible(k).length}</span></button>`).join("");
-  $("chips").innerHTML = SEGMENTS.map(([k, label]) =>
-    `<button class="chip ${state.segment === k ? "on" : ""}" data-seg="${k}">${label}</button>`).join("");
+  $("chips").innerHTML = `<span class="chiplabel">Segment</span>` + SEGMENTS.map(([k, label]) =>
+    `<button class="chip ${state.segment === k ? "on" : ""}" data-seg="${k}">${label}</button>`).join("") +
+    `<span class="chiplabel">Signal</span>` + SIG_TYPES.map(([k, label]) =>
+    `<button class="chip ${state.sigType === k ? "on" : ""}" data-sig="${k}">${label}</button>`).join("");
   const opts = [`<option value="all">All sellers</option>`].concat(DATA.sellers.map((s) =>
     `<option value="${s.id}" ${state.seller === s.id ? "selected" : ""}>${esc(s.name)} (${s.cards})${s.status !== "active" ? " - " + s.status : ""}</option>`));
   $("seller").innerHTML = opts.join("");
@@ -180,7 +196,7 @@ function cardHtml(c) {
   const meta = c.account_id
     ? [c.region, c.tier, c.segment, c.industry, c.arr_band + " ARR"].join(" &middot; ")
     : [c.region, esc(c.domain), "not in CRM"].join(" &middot; ");
-  const signals = c.signals.map((s) => `<li><span class="type">${TYPE[s.type] || s.type}</span><span>${esc(s.headline)}</span><time class="sigdate" datetime="${s.timestamp}">${fmtDate(s.timestamp)}</time><span class="sigscore">${s.score.toFixed(0)} pts</span></li>`).join("");
+  const signals = c.signals.map((s) => `<li class="${state.sigType !== "all" && s.type === state.sigType ? "match" : ""}"><span class="type">${TYPE[s.type] || s.type}</span><span>${esc(s.headline)}</span><time class="sigdate" datetime="${s.timestamp}">${fmtDate(s.timestamp)}</time><span class="sigscore">${s.score.toFixed(0)} pts</span></li>`).join("");
   const flags = c.flags.length ? `<div class="flags">${c.flags.map((f) => `<span class="flag">${esc(f)}</span>`).join("")}</div>` : "";
   const btn = (k, label) => `<button class="btn ${open === k ? "on" : ""}" data-open="${k}" data-key="${esc(c.key)}">${label}</button>`;
   let panel = "";
@@ -197,7 +213,7 @@ function cardHtml(c) {
     ${flags}
     <div class="actions">
       ${btn("why", "Why this score")}${btn("brief", "Research brief")}${btn("email", "Draft email")}
-      <a class="btn" href="${esc(c.salesforce_url)}" target="_blank" rel="noopener">${c.account_id ? "Open in Salesforce" : "Create in Salesforce"}</a>
+      <a class="btn" href="${esc(c.salesforce_url)}" target="_blank" rel="noopener">${SF_LOGO}${c.account_id ? "Open in Salesforce" : "Create in Salesforce"}</a>
     </div>
     ${panel ? `<div class="panel">${panel}</div>` : ""}
   </article>`;
@@ -244,10 +260,11 @@ function renderSlack() {
 function render() { renderControls(); renderList(); renderSlack(); }
 
 document.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-list],[data-seg],[data-open],[data-select],[data-copy],[data-jump]");
+  const t = e.target.closest("[data-list],[data-seg],[data-sig],[data-open],[data-select],[data-copy],[data-jump]");
   if (!t) return;
   if (t.dataset.list) { state.list = t.dataset.list; state.selected = null; }
   else if (t.dataset.seg) { state.segment = t.dataset.seg; state.selected = null; }
+  else if (t.dataset.sig) { state.sigType = t.dataset.sig; state.selected = null; }
   else if (t.dataset.open) {
     const k = t.dataset.key;
     state.open[k] = state.open[k] === t.dataset.open ? null : t.dataset.open;
