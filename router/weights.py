@@ -70,6 +70,8 @@ JOB_ARRIVAL_POINTS = {
 }
 JOB_ARRIVAL_DEFAULT = 40
 JOB_DEPARTURE_SHARE = 0.6
+# Arrivals only: they joined from a Fireworks customer, so they already know the product.
+JOB_PREV_CUSTOMER_BONUS = 15
 
 # --- usage_spike: base + min(cap, pct / divisor) + volume + severity
 USAGE_BASE = 70

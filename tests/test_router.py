@@ -1,7 +1,11 @@
 import unittest
+from datetime import datetime
 from pathlib import Path
 
+from router import weights as W
+from router.data import Signal
 from router.pipeline import build_output, run
+from router.scoring import score_signal
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 
@@ -58,6 +62,23 @@ class RouterTest(unittest.TestCase):
     def test_us_east_strategic_round_robin(self):
         owners = {self.cards[n]["owner"]["name"] for n in ("Grove Grid", "Yarrow Build")}
         self.assertEqual(owners, {"Alex Rivera", "Chris Walsh"})
+
+    def test_arrival_from_customer_scores_higher(self):
+        base = dict(
+            signal_id="T", signal_type="job_change", account_id="", account_name="X",
+            domain="x.io", region="US-East", timestamp=datetime(2026, 8, 12), severity="medium",
+        )
+        detail = {"person": "P", "new_title": "CTO", "direction": "arrived"}
+        warm = score_signal(Signal(detail=dict(detail, previous_company="Caliber Robotics"), **base), False, {"caliberrobotics"})
+        cold = score_signal(Signal(detail=dict(detail, previous_company="Nowhere Inc"), **base), False, {"caliberrobotics"})
+        self.assertEqual(warm.score - cold.score, W.JOB_PREV_CUSTOMER_BONUS)
+        self.assertTrue(any("customer" in label for label, _ in warm.parts))
+        # departures never get the bonus
+        left = score_signal(
+            Signal(detail=dict(detail, previous_company="Caliber Robotics", direction="departed"), **base),
+            False, {"caliberrobotics"},
+        )
+        self.assertFalse(any("customer" in label for label, _ in left.parts))
 
     def test_nothing_on_hold_and_capacity_respected(self):
         self.assertEqual(self.out["totals"]["hold_queue"], 0)

@@ -6,16 +6,20 @@ TEMPLATE = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Signal Router | Fireworks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <style>
   :root {
     --bg: #f7f7f8; --panel: #ffffff; --ink: #16181d; --muted: #6b7280; --line: #e4e4e7;
     --accent: #6726fe; --accent-soft: #f0eaff; --good: #157f4b; --good-soft: #e6f4ec;
     --warn: #a15c07; --warn-soft: #fbf0df; --cold: #55606e; --cold-soft: #eef0f3;
-    --mono: "Favorit", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --mono: "Favorit", "SF Mono", ui-monospace, Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 14px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+         font-size: 14px; line-height: 1.45;
+         font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
   .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px 64px; }
   header { background: var(--ink); color: #fff; border-bottom: 3px solid var(--accent); margin: 0 -24px;
            padding: 30px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }

@@ -54,6 +54,14 @@ class Dataset:
                 return account
         return None
 
+    @property
+    def customer_names(self) -> set:
+        return {norm_name(a.name) for a in self.accounts.values() if a.is_customer}
+
+
+def norm_name(value: str) -> str:
+    return "".join(ch for ch in value.lower() if ch.isalnum())
+
 
 def _rows(path: Path):
     with open(path, newline="") as f:

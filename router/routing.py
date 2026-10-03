@@ -87,7 +87,7 @@ def build_cards(ds: Dataset) -> List[Card]:
                     "Name matches %s (%s, %s) but the domain differs; confirm before merging"
                     % (twin.account_id, twin.name, twin.domain)
                 )
-        card.score = score_account(account, signals, is_customer, window)
+        card.score = score_account(account, signals, is_customer, window, customer_names=ds.customer_names)
         cards.append(card)
 
     cards.sort(key=lambda c: (-c.score.total, c.name))

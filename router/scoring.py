@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import List, Optional, Tuple
 
 from . import weights as W
-from .data import Account, Signal
+from .data import Account, Signal, norm_name
 
 Part = Tuple[str, float]
 
@@ -63,7 +63,7 @@ def _first_match(thresholds, value, default, compare):
     return default
 
 
-def score_signal(signal: Signal, is_customer: bool) -> SignalScore:
+def score_signal(signal: Signal, is_customer: bool, customer_names=frozenset()) -> SignalScore:
     d = signal.detail
     t = signal.signal_type
 
@@ -109,6 +109,8 @@ def score_signal(signal: Signal, is_customer: bool) -> SignalScore:
         title_points = W.JOB_ARRIVAL_POINTS.get(title, W.JOB_ARRIVAL_DEFAULT)
         if direction == "arrived":
             parts = [("Arrived: %s" % title, title_points)]
+            if prev and norm_name(prev) in customer_names:
+                parts.append(("Previous company %s is a customer" % prev, W.JOB_PREV_CUSTOMER_BONUS))
             headline = "New %s: %s (from %s)" % (title, person, prev)
         else:
             parts = [(
@@ -157,9 +159,12 @@ def score_account(
     signals: List[Signal],
     is_customer: bool,
     window: Tuple[datetime, datetime],
+    customer_names=frozenset(),
 ) -> AccountScore:
     blend = W.BLEND["customer" if is_customer else "prospect"]
-    scored = sorted((score_signal(s, is_customer) for s in signals), key=lambda s: s.score, reverse=True)
+    scored = sorted(
+        (score_signal(s, is_customer, customer_names) for s in signals), key=lambda s: s.score, reverse=True
+    )
 
     contributions = []
     for weight, s in zip(W.STACK_WEIGHTS, scored):

@@ -101,7 +101,7 @@ Every table below is a ranking, highest first. **Why this rank** is the reason t
 | 1 | Usage spike | 70 + min(20, pct increase / 20) + volume | 79 to 91 | Observed usage on a paying customer. A fact, not an inference |
 | 2 | Competitor | action + freshness | 38 to 89 | They are shopping a vendor now. A pricing page can outscore usage; a stale benchmark sits much lower, which is why the range is wide |
 | 3 | Intent | 50 + intensity × 30 + topic + source | 71 to 89 | They are researching what we sell. Weaker than a live evaluation |
-| 4 | New hire, arrived | title points | up to 83 | A new budget owner revisits the stack in the first 90 days |
+| 4 | New hire, arrived | title points + customer bonus | up to 98 | A new budget owner revisits the stack in the first 90 days. Higher still if they came from a customer |
 | 5 | Funding | round + min(15, $M / 10) | 35 to 74 | Budget timing, not intent |
 | 6 | Departure | 0.6 × the same title's arrival points | 24 to 47 | The seat will be filled, but the buyer is not there yet |
 
@@ -158,6 +158,13 @@ Which competitor they looked at does not change the score. Together AI, Replicat
 | 1 | CTO, Head of AI | 78 | 46.8 | Owns the budget and the stack decision |
 | 2 | VP Infrastructure, Director of ML Platform, Chief Architect | 68 | 40.8 | Owns the platform decision, one level from the budget |
 | 3 | Staff ML Engineer | 40 | 24 | Does not buy. Can still influence a build, so it scores |
+
+**Ranking: previous company, arrivals only.** A new hire who joined from a Fireworks customer already knows the product, so that arrival scores higher. Checked against all 11 job changes in this file: no previous company is a customer, so this bonus never fires here. One (Bastion Systems) appears only as another prospect. Names also recycle in this file (two different people are "Avery Nguyen"), so real champion tracking needs person-level identity, not name matching.
+
+| Rank | Previous company | Points | Why this rank |
+|---|---|---|---|
+| 1 | A Fireworks customer | +15 | They already know the product. Stronger than a direct topic match (+10): this person has seen it used |
+| 2 | Anything else | 0 | No extra evidence |
 
 **Ranking: usage volume.** Requests in 7 days. This keeps a huge percent increase on a tiny base from looking like a large account.
 
