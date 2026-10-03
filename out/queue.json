@@ -234,6 +234,7 @@
           "severity_hint": "medium",
           "headline": "Researching \"fine-tuning platform\"",
           "score": 77.4,
+          "contribution": 46.5,
           "parts": [
             {
               "label": "Intent base",
@@ -269,6 +270,7 @@
           "severity_hint": "high",
           "headline": "Raised Series C, $25M",
           "score": 65.5,
+          "contribution": 9.8,
           "parts": [
             {
               "label": "Round: Series C",
@@ -404,6 +406,7 @@
           "severity_hint": "low",
           "headline": "Usage up 354% on /v1/chat/completions (40,160 requests in 7 days)",
           "score": 90.7,
+          "contribution": 54.4,
           "parts": [
             {
               "label": "Usage base (observed product usage)",
@@ -521,6 +524,7 @@
           "severity_hint": "low",
           "headline": "Usage up 315% on /v1/chat/completions (15,235 requests in 7 days)",
           "score": 83.8,
+          "contribution": 50.3,
           "parts": [
             {
               "label": "Usage base (observed product usage)",
@@ -638,6 +642,7 @@
           "severity_hint": "medium",
           "headline": "Usage up 254% on /v1/embeddings (25,958 requests in 7 days)",
           "score": 87.7,
+          "contribution": 52.6,
           "parts": [
             {
               "label": "Usage base (observed product usage)",
@@ -753,6 +758,7 @@
           "severity_hint": "medium",
           "headline": "New Director of ML Platform: Riley Patel (from Nacre Defense)",
           "score": 68,
+          "contribution": 40.8,
           "parts": [
             {
               "label": "Arrived: Director of ML Platform",
@@ -854,6 +860,7 @@
           "severity_hint": "high",
           "headline": "Usage up 78% on /v1/chat/completions (3,551 requests in 7 days)",
           "score": 78.9,
+          "contribution": 47.3,
           "parts": [
             {
               "label": "Usage base (observed product usage)",
@@ -969,6 +976,7 @@
           "severity_hint": "medium",
           "headline": "Researching \"open-source LLM hosting\"",
           "score": 78.6,
+          "contribution": 47.2,
           "parts": [
             {
               "label": "Intent base",
@@ -1091,6 +1099,7 @@
           "severity_hint": "high",
           "headline": "Raised Series C, $60M",
           "score": 69.0,
+          "contribution": 41.4,
           "parts": [
             {
               "label": "Round: Series C",
@@ -1197,6 +1206,7 @@
           "severity_hint": "medium",
           "headline": "Raised Series B, $40M",
           "score": 54.0,
+          "contribution": 32.4,
           "parts": [
             {
               "label": "Round: Series B",
@@ -1303,6 +1313,7 @@
           "severity_hint": "high",
           "headline": "Raised Seed Extension, $85M",
           "score": 45.5,
+          "contribution": 27.3,
           "parts": [
             {
               "label": "Round: Seed Extension",
@@ -1409,6 +1420,7 @@
           "severity_hint": "low",
           "headline": "CTO Avery Nguyen left (champion risk, seat opening)",
           "score": 41.8,
+          "contribution": 25.1,
           "parts": [
             {
               "label": "Departed: CTO (78 x 0.6, seat opening)",
@@ -1508,6 +1520,7 @@
           "severity_hint": "medium",
           "headline": "Raised Seed Extension, $25M",
           "score": 34.5,
+          "contribution": 20.7,
           "parts": [
             {
               "label": "Round: Seed Extension",
@@ -1614,6 +1627,7 @@
           "severity_hint": "high",
           "headline": "Chief Architect Casey Garcia left (champion risk, seat opening)",
           "score": 45.8,
+          "contribution": 27.5,
           "parts": [
             {
               "label": "Departed: Chief Architect (68 x 0.6, seat opening)",
@@ -1713,6 +1727,7 @@
           "severity_hint": "low",
           "headline": "Researching \"function calling API\"",
           "score": 86.5,
+          "contribution": 38.9,
           "parts": [
             {
               "label": "Intent base",
@@ -1748,6 +1763,7 @@
           "severity_hint": "high",
           "headline": "Raised Series A, $60M",
           "score": 53.0,
+          "contribution": 6.0,
           "parts": [
             {
               "label": "Round: Series A",
@@ -1883,6 +1899,7 @@
           "severity_hint": "low",
           "headline": "Visited OpenAI pricing page (12 days since last signal)",
           "score": 82,
+          "contribution": 36.9,
           "parts": [
             {
               "label": "Action: pricing page visit",
@@ -1989,6 +2006,7 @@
           "severity_hint": "high",
           "headline": "Researching \"RAG pipeline infrastructure\"",
           "score": 81.2,
+          "contribution": 36.5,
           "parts": [
             {
               "label": "Intent base",
@@ -2024,6 +2042,7 @@
           "severity_hint": "medium",
           "headline": "Researching \"GPU alternatives\"",
           "score": 74.7,
+          "contribution": 8.4,
           "parts": [
             {
               "label": "Intent base",
@@ -2059,6 +2078,7 @@
           "severity_hint": "medium",
           "headline": "Downloaded Anyscale benchmark (25 days since last signal)",
           "score": 38,
+          "contribution": 2.1,
           "parts": [
             {
               "label": "Action: benchmark download",
@@ -2225,6 +2245,7 @@
           "severity_hint": "medium",
           "headline": "Researching \"function calling API\"",
           "score": 87.6,
+          "contribution": 39.4,
           "parts": [
             {
               "label": "Intent base",
@@ -2260,6 +2281,7 @@
           "severity_hint": "medium",
           "headline": "Read Replicate docs (28 days since last signal)",
           "score": 50,
+          "contribution": 5.6,
           "parts": [
             {
               "label": "Action: docs read",
@@ -2399,6 +2421,7 @@
           "severity_hint": "high",
           "headline": "Raised Series A, $120M",
           "score": 59.0,
+          "contribution": 26.6,
           "parts": [
             {
               "label": "Round: Series A",
@@ -2507,6 +2530,7 @@
           "severity_hint": "high",
           "headline": "Searched Replicate comparisons (23 days since last signal)",
           "score": 71,
+          "contribution": 32.0,
           "parts": [
             {
               "label": "Action: comparison search",
@@ -2613,6 +2637,7 @@
           "severity_hint": "high",
           "headline": "Raised Series C, $60M",
           "score": 69.0,
+          "contribution": 31.1,
           "parts": [
             {
               "label": "Round: Series C",
@@ -2719,6 +2744,7 @@
           "severity_hint": "low",
           "headline": "Researching \"LLM inference cost optimization\"",
           "score": 83.2,
+          "contribution": 37.4,
           "parts": [
             {
               "label": "Intent base",
@@ -2843,6 +2869,7 @@
           "severity_hint": "high",
           "headline": "Read Replicate docs (26 days since last signal)",
           "score": 55,
+          "contribution": 24.8,
           "parts": [
             {
               "label": "Action: docs read",
@@ -2951,6 +2978,7 @@
           "severity_hint": "high",
           "headline": "Searched Together AI comparisons (4 days since last signal)",
           "score": 89,
+          "contribution": 40.1,
           "parts": [
             {
               "label": "Action: comparison search",
@@ -3059,6 +3087,7 @@
           "severity_hint": "low",
           "headline": "Visited Together AI pricing page (4 days since last signal)",
           "score": 87,
+          "contribution": 39.2,
           "parts": [
             {
               "label": "Action: pricing page visit",
@@ -3165,6 +3194,7 @@
           "severity_hint": "high",
           "headline": "New Director of ML Platform: Jordan Kim (from Beryl Genomics)",
           "score": 73,
+          "contribution": 32.8,
           "parts": [
             {
               "label": "Arrived: Director of ML Platform",
@@ -3189,6 +3219,7 @@
           "severity_hint": "medium",
           "headline": "Raised Seed Extension, $60M",
           "score": 38.0,
+          "contribution": 4.3,
           "parts": [
             {
               "label": "Round: Seed Extension",
@@ -3310,6 +3341,7 @@
           "severity_hint": "high",
           "headline": "Searched Anyscale comparisons (19 days since last signal)",
           "score": 79,
+          "contribution": 35.5,
           "parts": [
             {
               "label": "Action: comparison search",
@@ -3416,6 +3448,7 @@
           "severity_hint": "low",
           "headline": "Visited Anyscale pricing page (9 days since last signal)",
           "score": 82,
+          "contribution": 36.9,
           "parts": [
             {
               "label": "Action: pricing page visit",
@@ -3524,6 +3557,7 @@
           "severity_hint": "low",
           "headline": "Raised Series A, $200M",
           "score": 52,
+          "contribution": 23.4,
           "parts": [
             {
               "label": "Round: Series A",
@@ -3630,6 +3664,7 @@
           "severity_hint": "low",
           "headline": "Researching \"GPU alternatives\"",
           "score": 89.2,
+          "contribution": 40.1,
           "parts": [
             {
               "label": "Intent base",
@@ -3752,6 +3787,7 @@
           "severity_hint": "high",
           "headline": "Head of AI Jordan Kim left (seat opening)",
           "score": 51.8,
+          "contribution": 23.3,
           "parts": [
             {
               "label": "Departed: Head of AI (78 x 0.6, seat opening)",
@@ -3851,6 +3887,7 @@
           "severity_hint": "low",
           "headline": "Researching \"GPU alternatives\"",
           "score": 76.9,
+          "contribution": 34.6,
           "parts": [
             {
               "label": "Intent base",
@@ -3976,6 +4013,7 @@
           "severity_hint": "high",
           "headline": "Raised Series D, $25M",
           "score": 73.5,
+          "contribution": 33.1,
           "parts": [
             {
               "label": "Round: Series D",
@@ -4084,6 +4122,7 @@
           "severity_hint": "medium",
           "headline": "Researching \"model serving latency\"",
           "score": 70.5,
+          "contribution": 31.7,
           "parts": [
             {
               "label": "Intent base",
@@ -4208,6 +4247,7 @@
           "severity_hint": "low",
           "headline": "Read Replicate docs (15 days since last signal)",
           "score": 53,
+          "contribution": 23.9,
           "parts": [
             {
               "label": "Action: docs read",
@@ -4316,6 +4356,7 @@
           "severity_hint": "high",
           "headline": "Read Replicate docs (26 days since last signal)",
           "score": 55,
+          "contribution": 24.8,
           "parts": [
             {
               "label": "Action: docs read",
@@ -4422,6 +4463,7 @@
           "severity_hint": "high",
           "headline": "Raised Seed Extension, $40M",
           "score": 41.0,
+          "contribution": 18.5,
           "parts": [
             {
               "label": "Round: Seed Extension",
@@ -4530,6 +4572,7 @@
           "severity_hint": "low",
           "headline": "Raised Series B, $15M",
           "score": 46.5,
+          "contribution": 20.9,
           "parts": [
             {
               "label": "Round: Series B",
@@ -4638,6 +4681,7 @@
           "severity_hint": "medium",
           "headline": "VP Infrastructure Avery Nguyen left (seat opening)",
           "score": 40.8,
+          "contribution": 18.4,
           "parts": [
             {
               "label": "Departed: VP Infrastructure (68 x 0.6, seat opening)",
@@ -4739,6 +4783,7 @@
           "severity_hint": "high",
           "headline": "VP Infrastructure Avery Garcia left (seat opening)",
           "score": 45.8,
+          "contribution": 20.6,
           "parts": [
             {
               "label": "Departed: VP Infrastructure (68 x 0.6, seat opening)",
@@ -4840,6 +4885,7 @@
           "severity_hint": "high",
           "headline": "New Staff ML Engineer: Morgan Smith (from Slate Intelligence)",
           "score": 45,
+          "contribution": 20.3,
           "parts": [
             {
               "label": "Arrived: Staff ML Engineer",
@@ -4941,6 +4987,7 @@
           "severity_hint": "medium",
           "headline": "Chief Architect Riley Kim left (seat opening)",
           "score": 40.8,
+          "contribution": 18.4,
           "parts": [
             {
               "label": "Departed: Chief Architect (68 x 0.6, seat opening)",
@@ -5042,6 +5089,7 @@
           "severity_hint": "medium",
           "headline": "New Staff ML Engineer: Avery Smith (from Bastion Systems)",
           "score": 40,
+          "contribution": 18.0,
           "parts": [
             {
               "label": "Arrived: Staff ML Engineer",
@@ -5141,6 +5189,7 @@
           "severity_hint": "high",
           "headline": "Raised Series A, $25M",
           "score": 49.5,
+          "contribution": 22.3,
           "parts": [
             {
               "label": "Round: Series A",
@@ -5247,6 +5296,7 @@
           "severity_hint": "medium",
           "headline": "Staff ML Engineer Casey Nguyen left (seat opening)",
           "score": 24.0,
+          "contribution": 10.8,
           "parts": [
             {
               "label": "Departed: Staff ML Engineer (40 x 0.6, seat opening)",

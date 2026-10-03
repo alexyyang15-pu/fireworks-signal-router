@@ -50,10 +50,11 @@ def card_to_dict(card, rank):
                 "severity_hint": s.signal.severity,
                 "headline": s.headline,
                 "score": round(s.score, 1),
+                "contribution": card.score.lines[i].points,
                 "parts": [{"label": l, "points": round(p, 1)} for l, p in s.parts],
                 "detail": s.signal.detail,
             }
-            for s in card.score.signals
+            for i, s in enumerate(card.score.signals)
         ],
         "breakdown": [line.to_dict() for line in card.score.lines],
         "play": content.play(card),

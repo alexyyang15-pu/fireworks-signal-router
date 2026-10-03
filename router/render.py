@@ -200,7 +200,7 @@ function cardHtml(c) {
   const meta = c.account_id
     ? [c.region, c.tier, c.segment, c.industry, c.arr_band + " ARR"].join(" &middot; ")
     : [c.region, esc(c.domain), "not in CRM"].join(" &middot; ");
-  const signals = c.signals.map((s) => `<li class="${state.sigType !== "all" && s.type === state.sigType ? "match" : ""}"><span class="type">${TYPE[s.type] || s.type}</span><span>${esc(s.headline)}</span><time class="sigdate" datetime="${s.timestamp}">${fmtDate(s.timestamp)}</time><span class="sigscore">${s.score.toFixed(0)} pts</span></li>`).join("");
+  const signals = c.signals.map((s) => `<li class="${state.sigType !== "all" && s.type === state.sigType ? "match" : ""}"><span class="type">${TYPE[s.type] || s.type}</span><span>${esc(s.headline)}</span><time class="sigdate" datetime="${s.timestamp}">${fmtDate(s.timestamp)}</time><span class="sigscore" title="What this signal added to the ${c.score.toFixed(1)} score, after stacking and blending">+${(s.contribution / 10).toFixed(1)}</span></li>`).join("");
   const flags = c.flags.length ? `<div class="flags">${c.flags.map((f) => `<span class="flag">${esc(f)}</span>`).join("")}</div>` : "";
   const btn = (k, label) => `<button class="btn ${open === k ? "on" : ""}" data-open="${k}" data-key="${esc(c.key)}">${label}</button>`;
   let panel = "";
@@ -246,7 +246,7 @@ function renderSlack() {
           <div class="fields">
             <div><span>Owner</span>${c.owner ? esc(c.owner.name) : "Hold queue"}</div>
             <div><span>Region / tier</span>${esc(c.region)} &middot; ${esc(c.tier)}</div>
-            <div><span>Top driver</span>${esc(c.signals[0].headline)} (${pts(c.breakdown[0].points)})</div>
+            <div><span>Top driver</span>${esc(c.signals[0].headline)} (+${(c.breakdown[0].points / 10).toFixed(1)})</div>
             <div><span>Fit</span>${c.components.fit.toFixed(0)} / 100</div>
           </div>
           <div class="sbtns">

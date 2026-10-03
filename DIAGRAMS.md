@@ -113,13 +113,13 @@ Every table below is a ranking, highest first. **Why this rank** is the reason t
 | 2 | RAG pipeline infrastructure | +4 | Adjacent. They may need retrieval, not necessarily our inference |
 | 3 | Anything else | 0 | The topic shows no product fit |
 
-**Ranking: intent source.** Source points measure confidence in the data, separate from the topic.
+**Ranking: intent source.** Source points measure confidence in the data, separate from the topic. Sources rank by how close the observation is to a buying decision, and how little noise it carries.
 
 | Rank | Source | Points | Why this rank |
 |---|---|---|---|
-| 1 | G2, 6sense | +6 | Purpose-built in-market data |
-| 2 | Harmonic | +3 | Broad coverage, not an evaluation of who is buying |
-| 3 | Web traffic | 0 | The noisiest source, so it adds nothing |
+| 1 | G2, 6sense | +6 | Closest to a deal. G2 is a review site, so being there *is* evaluating vendors. 6sense sells in-market accounts, so false positives cost them renewals |
+| 2 | Harmonic | +3 | Company intelligence, not intent. Funding and hiring are facts about a company, not observations of it shopping |
+| 3 | Web traffic | 0 | No idea who or why. Could be users, job seekers, or bots |
 
 **Ranking: competitor action.** How close the visit is to a buying decision.
 
