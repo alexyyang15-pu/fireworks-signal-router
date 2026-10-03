@@ -87,6 +87,12 @@ TEMPLATE = r"""<!doctype html>
   .slack .bar { background: #3f0e40; color: #fff; padding: 10px 14px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
   .slack .bar span { font-weight: 400; opacity: .7; font-size: 12px; }
   .slack .msg { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 10px; padding: 14px; }
+  @keyframes slackpop {
+    0% { opacity: 0; transform: translateY(-16px) scale(.95); }
+    60% { opacity: 1; transform: translateY(3px) scale(1.01); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .slack .msg.pop { animation: slackpop .45s cubic-bezier(.2, .9, .3, 1.15); transform-origin: top center; }
   .slack .avatar { width: 36px; height: 36px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; }
   .slack .who { color: #fff; font-weight: 700; }
   .slack .who small { color: #9a9b9e; font-weight: 400; margin-left: 6px; }
@@ -123,7 +129,7 @@ TEMPLATE = r"""<!doctype html>
 
 <script>
 const DATA = __DATA__;
-const state = { list: "customer", segment: "all", seller: "all", selected: null, open: {} };
+const state = { list: "customer", segment: "all", seller: "all", selected: null, open: {}, pop: false };
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const heat = (score) => score >= 8 ? "hot" : score >= 6.5 ? "warm" : "cool";
@@ -209,7 +215,7 @@ function renderSlack() {
   const channel = c.owner ? "@" + c.owner.name.split(" ")[0].toLowerCase() : "#signals-hold";
   $("slack").innerHTML = `
     <div class="bar">${esc(channel)} <span>Slack preview (mock)</span></div>
-    <div class="msg">
+    <div class="msg${state.pop ? " pop" : ""}">
       <div class="avatar">SR</div>
       <div>
         <div class="who">Signal Router <small>APP &middot; 9:02 AM</small></div>
@@ -220,7 +226,7 @@ function renderSlack() {
           <div class="fields">
             <div><span>Owner</span>${c.owner ? esc(c.owner.name) : "Hold queue"}</div>
             <div><span>Region / tier</span>${esc(c.region)} &middot; ${esc(c.tier)}</div>
-            <div><span>Top driver</span>${pts(c.breakdown[0].points)} from strongest signal</div>
+            <div><span>Top driver</span>${esc(c.signals[0].headline)} (${pts(c.breakdown[0].points)})</div>
             <div><span>Fit</span>${c.components.fit.toFixed(0)} / 100</div>
           </div>
           <div class="sbtns">
@@ -232,6 +238,7 @@ function renderSlack() {
       </div>
     </div>
     <div class="note">In production this posts as a DM to the owner. Here it previews the selected card.</div>`;
+  state.pop = false;
 }
 
 function render() { renderControls(); renderList(); renderSlack(); }
@@ -244,9 +251,10 @@ document.addEventListener("click", (e) => {
   else if (t.dataset.open) {
     const k = t.dataset.key;
     state.open[k] = state.open[k] === t.dataset.open ? null : t.dataset.open;
+    if (state.selected !== k) state.pop = true;
     state.selected = k;
   }
-  else if (t.dataset.select) { state.selected = t.dataset.select; }
+  else if (t.dataset.select) { state.pop = true; state.selected = t.dataset.select; }
   else if (t.dataset.copy) {
     const c = DATA.cards.find((x) => x.key === t.dataset.copy);
     navigator.clipboard && navigator.clipboard.writeText(`Subject: ${c.email.subject}\n\n${c.email.body}`);
@@ -255,7 +263,9 @@ document.addEventListener("click", (e) => {
   }
   else if (t.dataset.jump) {
     const c = DATA.cards.find((x) => x.key === t.dataset.jump);
-    state.list = c.list; state.selected = c.key;
+    state.list = c.list;
+    if (state.selected !== c.key) state.pop = true;
+    state.selected = c.key;
     if (state.seller !== "all" && (!c.owner || c.owner.id !== state.seller)) state.seller = "all";
     if (state.segment !== "all" && c.segment !== state.segment) state.segment = "all";
     if (t.dataset.then) state.open[c.key] = t.dataset.then;
