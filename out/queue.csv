@@ -16,24 +16,24 @@ prospect,1,9.3,Thorn Data,A196,APAC,Strategic,Enterprise-Expansion,Hiro Tanaka,2
 prospect,2,8.1,Chert Scale,A230,APAC,Mid-Market,AI-Native,Anika Reddy,1,Visited OpenAI pricing page (12 days since last signal),"Anika Reddy ramp starter book: 2 of 8 APAC signal accounts, mid-market prospects only",Anika Reddy is ramping; manager reviews before outreach
 prospect,3,7.8,Lupine Scale,A164,EMEA,Enterprise,Enterprise-Expansion,Tom O'Brien,3,"Researching ""RAG pipeline infrastructure""",EMEA / Enterprise,
 prospect,4,7.7,Helix Build,A269,US-East,Enterprise,Enterprise-Expansion,Alex Rivera,2,"Researching ""function calling API""",US-East / Enterprise,
-prospect,5,7.6,Osprey Grid,A197,APAC,Mid-Market,AI-Native,Anika Reddy,1,Searched Replicate comparisons (23 days since last signal),"Anika Reddy ramp starter book: 2 of 8 APAC signal accounts, mid-market prospects only",Anika Reddy is ramping; manager reviews before outreach
-prospect,6,7.3,Alabaster Mind,A167,EMEA,Strategic,Enterprise-Expansion,Tom O'Brien,1,"Raised Series A, $120M",EMEA / Strategic,
-prospect,7,7.3,Hemp Intelligence,A124,US-Central,Strategic,Enterprise-Expansion,Diego Morales,1,Read Replicate docs (26 days since last signal),US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
-prospect,8,7.2,Iris Secure,,US-East,Unknown,Unknown,Priya Shah,1,Searched Together AI comparisons (4 days since last signal),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
-prospect,9,7.2,Russet Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,Visited Together AI pricing page (4 days since last signal),"Unmatched signal: mid-market rep in APAC, tier unknown",Fit unknown: account not in CRM
-prospect,10,7.2,Grove Grid,A176,US-East,Strategic,Enterprise-Expansion,Chris Walsh,1,"Raised Series C, $60M",US-East / Strategic (round robin: Alex Rivera / Chris Walsh),
-prospect,11,7.1,Zinnia Mind,A232,US-East,Mid-Market,AI-Native,Priya Shah,1,"Researching ""LLM inference cost optimization""",US-East / Mid-Market,
-prospect,12,7.0,Solace Build,A251,EMEA,Enterprise,AI-Native,Tom O'Brien,1,Searched Anyscale comparisons (19 days since last signal),EMEA / Enterprise,
-prospect,13,6.8,Pioneer Health,A177,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,2,New Director of ML Platform: Jordan Kim (from Beryl Genomics),EMEA / Mid-Market,
-prospect,14,6.8,Heron Systems,A235,US-Central,Enterprise,Enterprise-Expansion,Diego Morales,1,Visited Anyscale pricing page (9 days since last signal),US-Central / Enterprise,
+prospect,5,7.3,Alabaster Mind,A167,EMEA,Strategic,Enterprise-Expansion,Tom O'Brien,1,"Raised Series A, $120M",EMEA / Strategic,
+prospect,6,7.3,Osprey Grid,A197,APAC,Mid-Market,AI-Native,Anika Reddy,1,Searched Replicate comparisons (23 days since last signal),"Anika Reddy ramp starter book: 2 of 8 APAC signal accounts, mid-market prospects only",Anika Reddy is ramping; manager reviews before outreach
+prospect,7,7.2,Grove Grid,A176,US-East,Strategic,Enterprise-Expansion,Chris Walsh,1,"Raised Series C, $60M",US-East / Strategic (round robin: Alex Rivera / Chris Walsh),
+prospect,8,7.1,Zinnia Mind,A232,US-East,Mid-Market,AI-Native,Priya Shah,1,"Researching ""LLM inference cost optimization""",US-East / Mid-Market,
+prospect,9,7.1,Hemp Intelligence,A124,US-Central,Strategic,Enterprise-Expansion,Diego Morales,1,Read Replicate docs (26 days since last signal),US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
+prospect,10,7.0,Iris Secure,,US-East,Unknown,Unknown,Priya Shah,1,Searched Together AI comparisons (4 days since last signal),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM
+prospect,11,6.9,Russet Defense,,APAC,Unknown,Unknown,Hiro Tanaka,1,Visited Together AI pricing page (4 days since last signal),"Unmatched signal: mid-market rep in APAC, tier unknown",Fit unknown: account not in CRM
+prospect,12,6.8,Pioneer Health,A177,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,2,New Director of ML Platform: Jordan Kim (from Beryl Genomics),EMEA / Mid-Market,
+prospect,13,6.8,Solace Build,A251,EMEA,Enterprise,AI-Native,Tom O'Brien,1,Searched Anyscale comparisons (19 days since last signal),EMEA / Enterprise,
+prospect,14,6.5,Heron Systems,A235,US-Central,Enterprise,Enterprise-Expansion,Diego Morales,1,Visited Anyscale pricing page (9 days since last signal),US-Central / Enterprise,
 prospect,15,6.5,Tarragon Scale,A013,US-Central,Strategic,AI-Native,Diego Morales,1,"Raised Series A, $200M",US-Central / Strategic: temporary cover for Rachel Park (OOO),Temporary cover while Rachel Park (OOO) is out
 prospect,16,6.2,Dolomite Systems,A223,EMEA,Mid-Market,Enterprise-Expansion,Lena Vogt,1,"Researching ""GPU alternatives""",EMEA / Mid-Market,
 prospect,17,6.2,Parallax Genomics,A095,US-West,Enterprise,Enterprise-Expansion,Jordan Kim,1,Head of AI Jordan Kim left (seat opening),US-West / Enterprise,
 prospect,18,6.2,Quill Flow,A096,US-Central,Mid-Market,AI-Native,Diego Morales,1,"Researching ""GPU alternatives""",US-Central / Mid-Market,
 prospect,19,6.0,Umber Vision,,US-Central,Unknown,Unknown,Diego Morales,1,"Raised Series D, $25M","Unmatched signal: mid-market rep in US-Central, tier unknown","Fit unknown: account not in CRM | Name matches A229 (Umber Vision, umbervision.io) but the domain differs; confirm before merging"
 prospect,20,5.7,Pulse Grid,,US-West,Unknown,Unknown,Sam Chen,1,"Researching ""model serving latency""","Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
-prospect,21,5.5,Lichen Cloud,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (15 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
-prospect,22,5.3,Lark Health,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (26 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
+prospect,21,5.2,Lichen Cloud,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (15 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
+prospect,22,5.0,Lark Health,,US-West,Unknown,Unknown,Sam Chen,1,Read Replicate docs (26 days since last signal),"Unmatched signal: mid-market rep in US-West, tier unknown",Fit unknown: account not in CRM
 prospect,23,5.0,Yarrow Build,A283,US-East,Strategic,AI-Native,Alex Rivera,1,"Raised Seed Extension, $40M",US-East / Strategic (round robin: Alex Rivera / Chris Walsh),
 prospect,24,4.9,Bastion Systems,,EMEA,Unknown,Unknown,Lena Vogt,1,"Raised Series B, $15M","Unmatched signal: mid-market rep in EMEA, tier unknown",Fit unknown: account not in CRM
 prospect,25,4.8,Onyx Genomics,,US-East,Unknown,Unknown,Priya Shah,1,VP Infrastructure Avery Nguyen left (seat opening),"Unmatched signal: mid-market rep in US-East, tier unknown",Fit unknown: account not in CRM

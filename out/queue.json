@@ -1889,10 +1889,6 @@
               "points": 82
             },
             {
-              "label": "Competitor: OpenAI",
-              "points": 0
-            },
-            {
               "label": "12 days since last signal",
               "points": 5
             },
@@ -1917,10 +1913,6 @@
             {
               "label": "Action: pricing page visit",
               "points": 82
-            },
-            {
-              "label": "Competitor: OpenAI",
-              "points": 0
             },
             {
               "label": "12 days since last signal",
@@ -2066,15 +2058,11 @@
           "timestamp": "2026-08-15T11:25:00Z",
           "severity_hint": "medium",
           "headline": "Downloaded Anyscale benchmark (25 days since last signal)",
-          "score": 44,
+          "score": 38,
           "parts": [
             {
               "label": "Action: benchmark download",
               "points": 46
-            },
-            {
-              "label": "Competitor: Anyscale",
-              "points": 6
             },
             {
               "label": "25 days since last signal",
@@ -2149,16 +2137,12 @@
         },
         {
           "label": "Downloaded Anyscale benchmark (25 days since last signal) (3rd signal)",
-          "points": 2.4,
-          "rule": "44.0 x 0.12 stack x 0.45 signal weight",
+          "points": 2.1,
+          "rule": "38.0 x 0.12 stack x 0.45 signal weight",
           "parts": [
             {
               "label": "Action: benchmark download",
               "points": 46
-            },
-            {
-              "label": "Competitor: Anyscale",
-              "points": 6
             },
             {
               "label": "25 days since last signal",
@@ -2172,8 +2156,8 @@
         },
         {
           "label": "Signal cap at 100",
-          "points": -2.3,
-          "rule": "stacked 105.2 capped to 100",
+          "points": -2.0,
+          "rule": "stacked 104.4 capped to 100",
           "parts": []
         },
         {
@@ -2275,15 +2259,11 @@
           "timestamp": "2026-08-15T18:35:00Z",
           "severity_hint": "medium",
           "headline": "Read Replicate docs (28 days since last signal)",
-          "score": 56,
+          "score": 50,
           "parts": [
             {
               "label": "Action: docs read",
               "points": 58
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
             },
             {
               "label": "28 days since last signal",
@@ -2331,16 +2311,12 @@
         },
         {
           "label": "Read Replicate docs (28 days since last signal) (2nd signal)",
-          "points": 6.3,
-          "rule": "56.0 x 0.25 stack x 0.45 signal weight",
+          "points": 5.6,
+          "rule": "50.0 x 0.25 stack x 0.45 signal weight",
           "parts": [
             {
               "label": "Action: docs read",
               "points": 58
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
             },
             {
               "label": "28 days since last signal",
@@ -2354,8 +2330,8 @@
         },
         {
           "label": "Signal cap at 100",
-          "points": -0.7,
-          "rule": "stacked 101.6 capped to 100",
+          "points": -0.1,
+          "rule": "stacked 100.1 capped to 100",
           "parts": []
         },
         {
@@ -2372,7 +2348,7 @@
         },
         {
           "label": "Recency: newest signal Aug 15",
-          "points": 9.1,
+          "points": 9.2,
           "rule": "91.6 x 0.10 recency weight",
           "parts": []
         }
@@ -2388,124 +2364,8 @@
       "slack": "Helix Build scored 7.7 / 10. Researching \"function calling API\" (+1 more). Education: they are researching what we sell. Send the matching proof point and offer a technical session."
     },
     {
-      "key": "A197",
-      "rank": 5,
-      "list": "prospect",
-      "account_id": "A197",
-      "name": "Osprey Grid",
-      "domain": "ospreygrid.ai",
-      "region": "APAC",
-      "segment": "AI-Native",
-      "tier": "Mid-Market",
-      "industry": "AI/ML",
-      "arr_band": "$10M-$50M",
-      "match": "account_id",
-      "score": 7.6,
-      "score_100": 76.2,
-      "components": {
-        "stacked_signals": 77.0,
-        "fit": 74.0,
-        "arr_points": 60,
-        "industry_points": 88,
-        "recency": 82.1
-      },
-      "owner": {
-        "id": "S11",
-        "name": "Anika Reddy"
-      },
-      "route_reason": "Anika Reddy ramp starter book: 2 of 8 APAC signal accounts, mid-market prospects only",
-      "flags": [
-        "Anika Reddy is ramping; manager reviews before outreach"
-      ],
-      "signals": [
-        {
-          "signal_id": "SIG048",
-          "type": "competitor_evaluation",
-          "timestamp": "2026-08-14T18:31:00Z",
-          "severity_hint": "high",
-          "headline": "Searched Replicate comparisons (23 days since last signal)",
-          "score": 77,
-          "parts": [
-            {
-              "label": "Action: comparison search",
-              "points": 74
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
-            },
-            {
-              "label": "23 days since last signal",
-              "points": -8
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ],
-          "detail": {
-            "competitor": "Replicate",
-            "action": "comparison_search",
-            "days_since_last_signal": 23
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "Searched Replicate comparisons (23 days since last signal) (strongest signal)",
-          "points": 34.7,
-          "rule": "77.0 x 1.00 stack x 0.45 signal weight",
-          "parts": [
-            {
-              "label": "Action: comparison search",
-              "points": 74
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
-            },
-            {
-              "label": "23 days since last signal",
-              "points": -8
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ]
-        },
-        {
-          "label": "ARR $10M-$50M",
-          "points": 13.5,
-          "rule": "60 x 0.50 ARR share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry: AI/ML",
-          "points": 19.8,
-          "rule": "88 x 0.50 industry share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 14",
-          "points": 8.2,
-          "rule": "82.1 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
-      "brief": "Osprey Grid: APAC prospect, AI/ML, $10M-$50M ARR, AI-Native segment. What happened: Searched Replicate comparisons (23 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Benchmarking inference options for Osprey Grid",
-        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nAnika Reddy",
-        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Osprey%20Grid&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0AAnika%20Reddy"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A197/view",
-      "slack": "Osprey Grid scored 7.6 / 10. Searched Replicate comparisons (23 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
-    },
-    {
       "key": "A167",
-      "rank": 6,
+      "rank": 5,
       "list": "prospect",
       "account_id": "A167",
       "name": "Alabaster Mind",
@@ -2610,54 +2470,50 @@
       "slack": "Alabaster Mind scored 7.3 / 10. Raised Series A, $120M. Timing: fresh budget. Anchor on scaling inference cost as they grow."
     },
     {
-      "key": "A124",
-      "rank": 7,
+      "key": "A197",
+      "rank": 6,
       "list": "prospect",
-      "account_id": "A124",
-      "name": "Hemp Intelligence",
-      "domain": "hempintelligence.ai",
-      "region": "US-Central",
-      "segment": "Enterprise-Expansion",
-      "tier": "Strategic",
-      "industry": "Logistics",
-      "arr_band": "$250M+",
+      "account_id": "A197",
+      "name": "Osprey Grid",
+      "domain": "ospreygrid.ai",
+      "region": "APAC",
+      "segment": "AI-Native",
+      "tier": "Mid-Market",
+      "industry": "AI/ML",
+      "arr_band": "$10M-$50M",
       "match": "account_id",
       "score": 7.3,
-      "score_100": 73.4,
+      "score_100": 73.5,
       "components": {
-        "stacked_signals": 61.0,
-        "fit": 80.0,
-        "arr_points": 90,
-        "industry_points": 70,
-        "recency": 99.6
+        "stacked_signals": 71.0,
+        "fit": 74.0,
+        "arr_points": 60,
+        "industry_points": 88,
+        "recency": 82.1
       },
       "owner": {
-        "id": "S06",
-        "name": "Diego Morales"
+        "id": "S11",
+        "name": "Anika Reddy"
       },
-      "route_reason": "US-Central / Strategic: temporary cover for Rachel Park (OOO)",
+      "route_reason": "Anika Reddy ramp starter book: 2 of 8 APAC signal accounts, mid-market prospects only",
       "flags": [
-        "Temporary cover while Rachel Park (OOO) is out"
+        "Anika Reddy is ramping; manager reviews before outreach"
       ],
       "signals": [
         {
-          "signal_id": "SIG020",
+          "signal_id": "SIG048",
           "type": "competitor_evaluation",
-          "timestamp": "2026-08-16T14:43:00Z",
+          "timestamp": "2026-08-14T18:31:00Z",
           "severity_hint": "high",
-          "headline": "Read Replicate docs (26 days since last signal)",
-          "score": 61,
+          "headline": "Searched Replicate comparisons (23 days since last signal)",
+          "score": 71,
           "parts": [
             {
-              "label": "Action: docs read",
-              "points": 58
+              "label": "Action: comparison search",
+              "points": 74
             },
             {
-              "label": "Competitor: Replicate",
-              "points": 6
-            },
-            {
-              "label": "26 days since last signal",
+              "label": "23 days since last signal",
               "points": -8
             },
             {
@@ -2667,27 +2523,23 @@
           ],
           "detail": {
             "competitor": "Replicate",
-            "action": "docs_read",
-            "days_since_last_signal": 26
+            "action": "comparison_search",
+            "days_since_last_signal": 23
           }
         }
       ],
       "breakdown": [
         {
-          "label": "Read Replicate docs (26 days since last signal) (strongest signal)",
-          "points": 27.5,
-          "rule": "61.0 x 1.00 stack x 0.45 signal weight",
+          "label": "Searched Replicate comparisons (23 days since last signal) (strongest signal)",
+          "points": 32.0,
+          "rule": "71.0 x 1.00 stack x 0.45 signal weight",
           "parts": [
             {
-              "label": "Action: docs read",
-              "points": 58
+              "label": "Action: comparison search",
+              "points": 74
             },
             {
-              "label": "Competitor: Replicate",
-              "points": 6
-            },
-            {
-              "label": "26 days since last signal",
+              "label": "23 days since last signal",
               "points": -8
             },
             {
@@ -2697,269 +2549,37 @@
           ]
         },
         {
-          "label": "ARR $250M+",
-          "points": 20.2,
-          "rule": "90 x 0.50 ARR share x 0.45 fit weight",
+          "label": "ARR $10M-$50M",
+          "points": 13.5,
+          "rule": "60 x 0.50 ARR share x 0.45 fit weight",
           "parts": []
         },
         {
-          "label": "Industry: Logistics",
-          "points": 15.7,
-          "rule": "70 x 0.50 industry share x 0.45 fit weight",
+          "label": "Industry: AI/ML",
+          "points": 19.8,
+          "rule": "88 x 0.50 industry share x 0.45 fit weight",
           "parts": []
         },
         {
-          "label": "Recency: newest signal Aug 16",
-          "points": 10.0,
-          "rule": "99.6 x 0.10 recency weight",
+          "label": "Recency: newest signal Aug 14",
+          "points": 8.2,
+          "rule": "82.1 x 0.10 recency weight",
           "parts": []
         }
       ],
       "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
-      "brief": "Hemp Intelligence: US-Central prospect, Logistics, $250M+ ARR, Enterprise-Expansion segment. What happened: Read Replicate docs (26 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "brief": "Osprey Grid: APAC prospect, AI/ML, $10M-$50M ARR, AI-Native segment. What happened: Searched Replicate comparisons (23 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
       "email": {
-        "subject": "Benchmarking inference options for Hemp Intelligence",
-        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nDiego Morales",
-        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Hemp%20Intelligence&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ADiego%20Morales"
+        "subject": "Benchmarking inference options for Osprey Grid",
+        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nAnika Reddy",
+        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Osprey%20Grid&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0AAnika%20Reddy"
       },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A124/view",
-      "slack": "Hemp Intelligence scored 7.3 / 10. Read Replicate docs (26 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
-    },
-    {
-      "key": "UNMATCHED:irissecure.dev",
-      "rank": 8,
-      "list": "prospect",
-      "account_id": null,
-      "name": "Iris Secure",
-      "domain": "irissecure.dev",
-      "region": "US-East",
-      "segment": "Unknown",
-      "tier": "Unknown",
-      "industry": null,
-      "arr_band": null,
-      "match": "unmatched",
-      "score": 7.2,
-      "score_100": 72.2,
-      "components": {
-        "stacked_signals": 95.0,
-        "fit": 45.0,
-        "arr_points": 50,
-        "industry_points": 40,
-        "recency": 91.7
-      },
-      "owner": {
-        "id": "S02",
-        "name": "Priya Shah"
-      },
-      "route_reason": "Unmatched signal: mid-market rep in US-East, tier unknown",
-      "flags": [
-        "Fit unknown: account not in CRM"
-      ],
-      "signals": [
-        {
-          "signal_id": "SIG035",
-          "type": "competitor_evaluation",
-          "timestamp": "2026-08-15T18:41:00Z",
-          "severity_hint": "high",
-          "headline": "Searched Together AI comparisons (4 days since last signal)",
-          "score": 95,
-          "parts": [
-            {
-              "label": "Action: comparison search",
-              "points": 74
-            },
-            {
-              "label": "Competitor: Together AI",
-              "points": 6
-            },
-            {
-              "label": "4 days since last signal",
-              "points": 10
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ],
-          "detail": {
-            "competitor": "Together AI",
-            "action": "comparison_search",
-            "days_since_last_signal": 4
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "Searched Together AI comparisons (4 days since last signal) (strongest signal)",
-          "points": 42.8,
-          "rule": "95.0 x 1.00 stack x 0.45 signal weight",
-          "parts": [
-            {
-              "label": "Action: comparison search",
-              "points": 74
-            },
-            {
-              "label": "Competitor: Together AI",
-              "points": 6
-            },
-            {
-              "label": "4 days since last signal",
-              "points": 10
-            },
-            {
-              "label": "Severity hint high",
-              "points": 5
-            }
-          ]
-        },
-        {
-          "label": "ARR unknown (not in CRM)",
-          "points": 11.2,
-          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry unknown (not in CRM)",
-          "points": 9.0,
-          "rule": "40 x 0.50 industry share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 15",
-          "points": 9.2,
-          "rule": "91.7 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
-      "brief": "Iris Secure (irissecure.dev) is not in the CRM yet; ARR and industry are unknown. What happened: Searched Together AI comparisons (4 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Benchmarking inference options for Iris Secure",
-        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nPriya Shah",
-        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Iris%20Secure&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0APriya%20Shah"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Iris%20Secure,Website=irissecure.dev",
-      "slack": "Iris Secure scored 7.2 / 10. Searched Together AI comparisons (4 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
-    },
-    {
-      "key": "UNMATCHED:russetdefense.co",
-      "rank": 9,
-      "list": "prospect",
-      "account_id": null,
-      "name": "Russet Defense",
-      "domain": "russetdefense.co",
-      "region": "APAC",
-      "segment": "Unknown",
-      "tier": "Unknown",
-      "industry": null,
-      "arr_band": null,
-      "match": "unmatched",
-      "score": 7.2,
-      "score_100": 72.1,
-      "components": {
-        "stacked_signals": 93.0,
-        "fit": 45.0,
-        "arr_points": 50,
-        "industry_points": 40,
-        "recency": 99.6
-      },
-      "owner": {
-        "id": "S10",
-        "name": "Hiro Tanaka"
-      },
-      "route_reason": "Unmatched signal: mid-market rep in APAC, tier unknown",
-      "flags": [
-        "Fit unknown: account not in CRM"
-      ],
-      "signals": [
-        {
-          "signal_id": "SIG034",
-          "type": "competitor_evaluation",
-          "timestamp": "2026-08-16T14:34:00Z",
-          "severity_hint": "low",
-          "headline": "Visited Together AI pricing page (4 days since last signal)",
-          "score": 93,
-          "parts": [
-            {
-              "label": "Action: pricing page visit",
-              "points": 82
-            },
-            {
-              "label": "Competitor: Together AI",
-              "points": 6
-            },
-            {
-              "label": "4 days since last signal",
-              "points": 10
-            },
-            {
-              "label": "Severity hint low",
-              "points": -5
-            }
-          ],
-          "detail": {
-            "competitor": "Together AI",
-            "action": "pricing_page_visit",
-            "days_since_last_signal": 4
-          }
-        }
-      ],
-      "breakdown": [
-        {
-          "label": "Visited Together AI pricing page (4 days since last signal) (strongest signal)",
-          "points": 41.9,
-          "rule": "93.0 x 1.00 stack x 0.45 signal weight",
-          "parts": [
-            {
-              "label": "Action: pricing page visit",
-              "points": 82
-            },
-            {
-              "label": "Competitor: Together AI",
-              "points": 6
-            },
-            {
-              "label": "4 days since last signal",
-              "points": 10
-            },
-            {
-              "label": "Severity hint low",
-              "points": -5
-            }
-          ]
-        },
-        {
-          "label": "ARR unknown (not in CRM)",
-          "points": 11.2,
-          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Industry unknown (not in CRM)",
-          "points": 9.0,
-          "rule": "40 x 0.50 industry share x 0.45 fit weight",
-          "parts": []
-        },
-        {
-          "label": "Recency: newest signal Aug 16",
-          "points": 10.0,
-          "rule": "99.6 x 0.10 recency weight",
-          "parts": []
-        }
-      ],
-      "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
-      "brief": "Russet Defense (russetdefense.co) is not in the CRM yet; ARR and industry are unknown. What happened: Visited Together AI pricing page (4 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
-      "email": {
-        "subject": "Benchmarking inference options for Russet Defense",
-        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nHiro Tanaka",
-        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Russet%20Defense&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0AHiro%20Tanaka"
-      },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Russet%20Defense,Website=russetdefense.co",
-      "slack": "Russet Defense scored 7.2 / 10. Visited Together AI pricing page (4 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A197/view",
+      "slack": "Osprey Grid scored 7.3 / 10. Searched Replicate comparisons (23 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
     },
     {
       "key": "A176",
-      "rank": 10,
+      "rank": 7,
       "list": "prospect",
       "account_id": "A176",
       "name": "Grove Grid",
@@ -3065,7 +2685,7 @@
     },
     {
       "key": "A232",
-      "rank": 11,
+      "rank": 8,
       "list": "prospect",
       "account_id": "A232",
       "name": "Zinnia Mind",
@@ -3186,53 +2806,51 @@
       "slack": "Zinnia Mind scored 7.1 / 10. Researching \"LLM inference cost optimization\". Education: they are researching what we sell. Send the matching proof point and offer a technical session."
     },
     {
-      "key": "A251",
-      "rank": 12,
+      "key": "A124",
+      "rank": 9,
       "list": "prospect",
-      "account_id": "A251",
-      "name": "Solace Build",
-      "domain": "solacebuild.dev",
-      "region": "EMEA",
-      "segment": "AI-Native",
-      "tier": "Enterprise",
-      "industry": "InsurTech",
-      "arr_band": "$50M-$250M",
+      "account_id": "A124",
+      "name": "Hemp Intelligence",
+      "domain": "hempintelligence.ai",
+      "region": "US-Central",
+      "segment": "Enterprise-Expansion",
+      "tier": "Strategic",
+      "industry": "Logistics",
+      "arr_band": "$250M+",
       "match": "account_id",
-      "score": 7.0,
-      "score_100": 70.4,
+      "score": 7.1,
+      "score_100": 70.7,
       "components": {
-        "stacked_signals": 85.0,
-        "fit": 51.5,
-        "arr_points": 75,
-        "industry_points": 28,
-        "recency": 89.7
+        "stacked_signals": 55.0,
+        "fit": 80.0,
+        "arr_points": 90,
+        "industry_points": 70,
+        "recency": 99.6
       },
       "owner": {
-        "id": "S08",
-        "name": "Tom O'Brien"
+        "id": "S06",
+        "name": "Diego Morales"
       },
-      "route_reason": "EMEA / Enterprise",
-      "flags": [],
+      "route_reason": "US-Central / Strategic: temporary cover for Rachel Park (OOO)",
+      "flags": [
+        "Temporary cover while Rachel Park (OOO) is out"
+      ],
       "signals": [
         {
-          "signal_id": "SIG043",
+          "signal_id": "SIG020",
           "type": "competitor_evaluation",
-          "timestamp": "2026-08-15T13:38:00Z",
+          "timestamp": "2026-08-16T14:43:00Z",
           "severity_hint": "high",
-          "headline": "Searched Anyscale comparisons (19 days since last signal)",
-          "score": 85,
+          "headline": "Read Replicate docs (26 days since last signal)",
+          "score": 55,
           "parts": [
             {
-              "label": "Action: comparison search",
-              "points": 74
+              "label": "Action: docs read",
+              "points": 58
             },
             {
-              "label": "Competitor: Anyscale",
-              "points": 6
-            },
-            {
-              "label": "19 days since last signal",
-              "points": 0
+              "label": "26 days since last signal",
+              "points": -8
             },
             {
               "label": "Severity hint high",
@@ -3240,29 +2858,25 @@
             }
           ],
           "detail": {
-            "competitor": "Anyscale",
-            "action": "comparison_search",
-            "days_since_last_signal": 19
+            "competitor": "Replicate",
+            "action": "docs_read",
+            "days_since_last_signal": 26
           }
         }
       ],
       "breakdown": [
         {
-          "label": "Searched Anyscale comparisons (19 days since last signal) (strongest signal)",
-          "points": 38.2,
-          "rule": "85.0 x 1.00 stack x 0.45 signal weight",
+          "label": "Read Replicate docs (26 days since last signal) (strongest signal)",
+          "points": 24.8,
+          "rule": "55.0 x 1.00 stack x 0.45 signal weight",
           "parts": [
             {
-              "label": "Action: comparison search",
-              "points": 74
+              "label": "Action: docs read",
+              "points": 58
             },
             {
-              "label": "Competitor: Anyscale",
-              "points": 6
-            },
-            {
-              "label": "19 days since last signal",
-              "points": 0
+              "label": "26 days since last signal",
+              "points": -8
             },
             {
               "label": "Severity hint high",
@@ -3271,37 +2885,253 @@
           ]
         },
         {
-          "label": "ARR $50M-$250M",
-          "points": 16.9,
-          "rule": "75 x 0.50 ARR share x 0.45 fit weight",
+          "label": "ARR $250M+",
+          "points": 20.2,
+          "rule": "90 x 0.50 ARR share x 0.45 fit weight",
           "parts": []
         },
         {
-          "label": "Industry: InsurTech",
-          "points": 6.3,
-          "rule": "28 x 0.50 industry share x 0.45 fit weight",
+          "label": "Industry: Logistics",
+          "points": 15.7,
+          "rule": "70 x 0.50 industry share x 0.45 fit weight",
           "parts": []
         },
         {
-          "label": "Recency: newest signal Aug 15",
-          "points": 9.0,
-          "rule": "89.7 x 0.10 recency weight",
+          "label": "Recency: newest signal Aug 16",
+          "points": 10.0,
+          "rule": "99.6 x 0.10 recency weight",
           "parts": []
         }
       ],
       "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
-      "brief": "Solace Build: EMEA prospect, InsurTech, $50M-$250M ARR, AI-Native segment. What happened: Searched Anyscale comparisons (19 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "brief": "Hemp Intelligence: US-Central prospect, Logistics, $250M+ ARR, Enterprise-Expansion segment. What happened: Read Replicate docs (26 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
       "email": {
-        "subject": "Benchmarking inference options for Solace Build",
-        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nTom O'Brien",
-        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Solace%20Build&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ATom%20O%27Brien"
+        "subject": "Benchmarking inference options for Hemp Intelligence",
+        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nDiego Morales",
+        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Hemp%20Intelligence&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ADiego%20Morales"
       },
-      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A251/view",
-      "slack": "Solace Build scored 7.0 / 10. Searched Anyscale comparisons (19 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A124/view",
+      "slack": "Hemp Intelligence scored 7.1 / 10. Read Replicate docs (26 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+    },
+    {
+      "key": "UNMATCHED:irissecure.dev",
+      "rank": 10,
+      "list": "prospect",
+      "account_id": null,
+      "name": "Iris Secure",
+      "domain": "irissecure.dev",
+      "region": "US-East",
+      "segment": "Unknown",
+      "tier": "Unknown",
+      "industry": null,
+      "arr_band": null,
+      "match": "unmatched",
+      "score": 7.0,
+      "score_100": 69.5,
+      "components": {
+        "stacked_signals": 89.0,
+        "fit": 45.0,
+        "arr_points": 50,
+        "industry_points": 40,
+        "recency": 91.7
+      },
+      "owner": {
+        "id": "S02",
+        "name": "Priya Shah"
+      },
+      "route_reason": "Unmatched signal: mid-market rep in US-East, tier unknown",
+      "flags": [
+        "Fit unknown: account not in CRM"
+      ],
+      "signals": [
+        {
+          "signal_id": "SIG035",
+          "type": "competitor_evaluation",
+          "timestamp": "2026-08-15T18:41:00Z",
+          "severity_hint": "high",
+          "headline": "Searched Together AI comparisons (4 days since last signal)",
+          "score": 89,
+          "parts": [
+            {
+              "label": "Action: comparison search",
+              "points": 74
+            },
+            {
+              "label": "4 days since last signal",
+              "points": 10
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ],
+          "detail": {
+            "competitor": "Together AI",
+            "action": "comparison_search",
+            "days_since_last_signal": 4
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "Searched Together AI comparisons (4 days since last signal) (strongest signal)",
+          "points": 40.1,
+          "rule": "89.0 x 1.00 stack x 0.45 signal weight",
+          "parts": [
+            {
+              "label": "Action: comparison search",
+              "points": 74
+            },
+            {
+              "label": "4 days since last signal",
+              "points": 10
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "label": "ARR unknown (not in CRM)",
+          "points": 11.2,
+          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry unknown (not in CRM)",
+          "points": 9.0,
+          "rule": "40 x 0.50 industry share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 15",
+          "points": 9.2,
+          "rule": "91.7 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
+      "brief": "Iris Secure (irissecure.dev) is not in the CRM yet; ARR and industry are unknown. What happened: Searched Together AI comparisons (4 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Benchmarking inference options for Iris Secure",
+        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nPriya Shah",
+        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Iris%20Secure&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0APriya%20Shah"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Iris%20Secure,Website=irissecure.dev",
+      "slack": "Iris Secure scored 7.0 / 10. Searched Together AI comparisons (4 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+    },
+    {
+      "key": "UNMATCHED:russetdefense.co",
+      "rank": 11,
+      "list": "prospect",
+      "account_id": null,
+      "name": "Russet Defense",
+      "domain": "russetdefense.co",
+      "region": "APAC",
+      "segment": "Unknown",
+      "tier": "Unknown",
+      "industry": null,
+      "arr_band": null,
+      "match": "unmatched",
+      "score": 6.9,
+      "score_100": 69.4,
+      "components": {
+        "stacked_signals": 87.0,
+        "fit": 45.0,
+        "arr_points": 50,
+        "industry_points": 40,
+        "recency": 99.6
+      },
+      "owner": {
+        "id": "S10",
+        "name": "Hiro Tanaka"
+      },
+      "route_reason": "Unmatched signal: mid-market rep in APAC, tier unknown",
+      "flags": [
+        "Fit unknown: account not in CRM"
+      ],
+      "signals": [
+        {
+          "signal_id": "SIG034",
+          "type": "competitor_evaluation",
+          "timestamp": "2026-08-16T14:34:00Z",
+          "severity_hint": "low",
+          "headline": "Visited Together AI pricing page (4 days since last signal)",
+          "score": 87,
+          "parts": [
+            {
+              "label": "Action: pricing page visit",
+              "points": 82
+            },
+            {
+              "label": "4 days since last signal",
+              "points": 10
+            },
+            {
+              "label": "Severity hint low",
+              "points": -5
+            }
+          ],
+          "detail": {
+            "competitor": "Together AI",
+            "action": "pricing_page_visit",
+            "days_since_last_signal": 4
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "Visited Together AI pricing page (4 days since last signal) (strongest signal)",
+          "points": 39.2,
+          "rule": "87.0 x 1.00 stack x 0.45 signal weight",
+          "parts": [
+            {
+              "label": "Action: pricing page visit",
+              "points": 82
+            },
+            {
+              "label": "4 days since last signal",
+              "points": 10
+            },
+            {
+              "label": "Severity hint low",
+              "points": -5
+            }
+          ]
+        },
+        {
+          "label": "ARR unknown (not in CRM)",
+          "points": 11.2,
+          "rule": "50 x 0.50 ARR share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry unknown (not in CRM)",
+          "points": 9.0,
+          "rule": "40 x 0.50 industry share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 16",
+          "points": 10.0,
+          "rule": "99.6 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
+      "brief": "Russet Defense (russetdefense.co) is not in the CRM yet; ARR and industry are unknown. What happened: Visited Together AI pricing page (4 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Benchmarking inference options for Russet Defense",
+        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nHiro Tanaka",
+        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Russet%20Defense&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0AHiro%20Tanaka"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Russet%20Defense,Website=russetdefense.co",
+      "slack": "Russet Defense scored 6.9 / 10. Visited Together AI pricing page (4 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
     },
     {
       "key": "A177",
-      "rank": 13,
+      "rank": 12,
       "list": "prospect",
       "account_id": "A177",
       "name": "Pioneer Health",
@@ -3445,6 +3275,112 @@
       "slack": "Pioneer Health scored 6.8 / 10. New Director of ML Platform: Jordan Kim (from Beryl Genomics) (+1 more). New buyer: introduce Fireworks in their first 90 days, before vendors are locked in."
     },
     {
+      "key": "A251",
+      "rank": 13,
+      "list": "prospect",
+      "account_id": "A251",
+      "name": "Solace Build",
+      "domain": "solacebuild.dev",
+      "region": "EMEA",
+      "segment": "AI-Native",
+      "tier": "Enterprise",
+      "industry": "InsurTech",
+      "arr_band": "$50M-$250M",
+      "match": "account_id",
+      "score": 6.8,
+      "score_100": 67.7,
+      "components": {
+        "stacked_signals": 79.0,
+        "fit": 51.5,
+        "arr_points": 75,
+        "industry_points": 28,
+        "recency": 89.7
+      },
+      "owner": {
+        "id": "S08",
+        "name": "Tom O'Brien"
+      },
+      "route_reason": "EMEA / Enterprise",
+      "flags": [],
+      "signals": [
+        {
+          "signal_id": "SIG043",
+          "type": "competitor_evaluation",
+          "timestamp": "2026-08-15T13:38:00Z",
+          "severity_hint": "high",
+          "headline": "Searched Anyscale comparisons (19 days since last signal)",
+          "score": 79,
+          "parts": [
+            {
+              "label": "Action: comparison search",
+              "points": 74
+            },
+            {
+              "label": "19 days since last signal",
+              "points": 0
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ],
+          "detail": {
+            "competitor": "Anyscale",
+            "action": "comparison_search",
+            "days_since_last_signal": 19
+          }
+        }
+      ],
+      "breakdown": [
+        {
+          "label": "Searched Anyscale comparisons (19 days since last signal) (strongest signal)",
+          "points": 35.5,
+          "rule": "79.0 x 1.00 stack x 0.45 signal weight",
+          "parts": [
+            {
+              "label": "Action: comparison search",
+              "points": 74
+            },
+            {
+              "label": "19 days since last signal",
+              "points": 0
+            },
+            {
+              "label": "Severity hint high",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "label": "ARR $50M-$250M",
+          "points": 16.9,
+          "rule": "75 x 0.50 ARR share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Industry: InsurTech",
+          "points": 6.3,
+          "rule": "28 x 0.50 industry share x 0.45 fit weight",
+          "parts": []
+        },
+        {
+          "label": "Recency: newest signal Aug 15",
+          "points": 9.0,
+          "rule": "89.7 x 0.10 recency weight",
+          "parts": []
+        }
+      ],
+      "play": "Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark.",
+      "brief": "Solace Build: EMEA prospect, InsurTech, $50M-$250M ARR, AI-Native segment. What happened: Searched Anyscale comparisons (19 days since last signal). Play: Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark. Proof point: Cursor, Notion, and Vercel run production inference on Fireworks.",
+      "email": {
+        "subject": "Benchmarking inference options for Solace Build",
+        "body": "Hi there,\n\nIf you are comparing inference providers right now, I can share a head-to-head on latency and cost for your workload. Cursor, Notion, and Vercel run production inference on Fireworks.\n\nBest,\nTom O'Brien",
+        "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Solace%20Build&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ATom%20O%27Brien"
+      },
+      "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A251/view",
+      "slack": "Solace Build scored 6.8 / 10. Searched Anyscale comparisons (19 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+    },
+    {
       "key": "A235",
       "rank": 14,
       "list": "prospect",
@@ -3457,10 +3393,10 @@
       "industry": "Energy",
       "arr_band": "$50M-$250M",
       "match": "account_id",
-      "score": 6.8,
-      "score_100": 67.8,
+      "score": 6.5,
+      "score_100": 65.1,
       "components": {
-        "stacked_signals": 88.0,
+        "stacked_signals": 82.0,
         "fit": 42.5,
         "arr_points": 75,
         "industry_points": 10,
@@ -3479,15 +3415,11 @@
           "timestamp": "2026-08-15T15:35:00Z",
           "severity_hint": "low",
           "headline": "Visited Anyscale pricing page (9 days since last signal)",
-          "score": 88,
+          "score": 82,
           "parts": [
             {
               "label": "Action: pricing page visit",
               "points": 82
-            },
-            {
-              "label": "Competitor: Anyscale",
-              "points": 6
             },
             {
               "label": "9 days since last signal",
@@ -3508,16 +3440,12 @@
       "breakdown": [
         {
           "label": "Visited Anyscale pricing page (9 days since last signal) (strongest signal)",
-          "points": 39.6,
-          "rule": "88.0 x 1.00 stack x 0.45 signal weight",
+          "points": 36.9,
+          "rule": "82.0 x 1.00 stack x 0.45 signal weight",
           "parts": [
             {
               "label": "Action: pricing page visit",
               "points": 82
-            },
-            {
-              "label": "Competitor: Anyscale",
-              "points": 6
             },
             {
               "label": "9 days since last signal",
@@ -3556,7 +3484,7 @@
         "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Heron%20Systems&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ADiego%20Morales"
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/r/Account/A235/view",
-      "slack": "Heron Systems scored 6.8 / 10. Visited Anyscale pricing page (9 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+      "slack": "Heron Systems scored 6.5 / 10. Visited Anyscale pricing page (9 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
     },
     {
       "key": "A013",
@@ -4255,10 +4183,10 @@
       "industry": null,
       "arr_band": null,
       "match": "unmatched",
-      "score": 5.5,
-      "score_100": 54.7,
+      "score": 5.2,
+      "score_100": 52.0,
       "components": {
-        "stacked_signals": 59.0,
+        "stacked_signals": 53.0,
         "fit": 45.0,
         "arr_points": 50,
         "industry_points": 40,
@@ -4279,15 +4207,11 @@
           "timestamp": "2026-08-14T10:43:00Z",
           "severity_hint": "low",
           "headline": "Read Replicate docs (15 days since last signal)",
-          "score": 59,
+          "score": 53,
           "parts": [
             {
               "label": "Action: docs read",
               "points": 58
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
             },
             {
               "label": "15 days since last signal",
@@ -4308,16 +4232,12 @@
       "breakdown": [
         {
           "label": "Read Replicate docs (15 days since last signal) (strongest signal)",
-          "points": 26.6,
-          "rule": "59.0 x 1.00 stack x 0.45 signal weight",
+          "points": 23.9,
+          "rule": "53.0 x 1.00 stack x 0.45 signal weight",
           "parts": [
             {
               "label": "Action: docs read",
               "points": 58
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
             },
             {
               "label": "15 days since last signal",
@@ -4356,7 +4276,7 @@
         "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Lichen%20Cloud&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ASam%20Chen"
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Lichen%20Cloud,Website=lichencloud.dev",
-      "slack": "Lichen Cloud scored 5.5 / 10. Read Replicate docs (15 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+      "slack": "Lichen Cloud scored 5.2 / 10. Read Replicate docs (15 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
     },
     {
       "key": "UNMATCHED:larkhealth.dev",
@@ -4371,10 +4291,10 @@
       "industry": null,
       "arr_band": null,
       "match": "unmatched",
-      "score": 5.3,
-      "score_100": 52.9,
+      "score": 5.0,
+      "score_100": 50.2,
       "components": {
-        "stacked_signals": 61.0,
+        "stacked_signals": 55.0,
         "fit": 45.0,
         "arr_points": 50,
         "industry_points": 40,
@@ -4395,15 +4315,11 @@
           "timestamp": "2026-08-11T13:35:00Z",
           "severity_hint": "high",
           "headline": "Read Replicate docs (26 days since last signal)",
-          "score": 61,
+          "score": 55,
           "parts": [
             {
               "label": "Action: docs read",
               "points": 58
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
             },
             {
               "label": "26 days since last signal",
@@ -4424,16 +4340,12 @@
       "breakdown": [
         {
           "label": "Read Replicate docs (26 days since last signal) (strongest signal)",
-          "points": 27.5,
-          "rule": "61.0 x 1.00 stack x 0.45 signal weight",
+          "points": 24.8,
+          "rule": "55.0 x 1.00 stack x 0.45 signal weight",
           "parts": [
             {
               "label": "Action: docs read",
               "points": 58
-            },
-            {
-              "label": "Competitor: Replicate",
-              "points": 6
             },
             {
               "label": "26 days since last signal",
@@ -4472,7 +4384,7 @@
         "mailto": "mailto:?subject=Benchmarking%20inference%20options%20for%20Lark%20Health&body=Hi%20there%2C%0A%0AIf%20you%20are%20comparing%20inference%20providers%20right%20now%2C%20I%20can%20share%20a%20head-to-head%20on%20latency%20and%20cost%20for%20your%20workload.%20Cursor%2C%20Notion%2C%20and%20Vercel%20run%20production%20inference%20on%20Fireworks.%0A%0ABest%2C%0ASam%20Chen"
       },
       "salesforce_url": "https://fireworks.lightning.force.com/lightning/o/Account/new?defaultFieldValues=Name=Lark%20Health,Website=larkhealth.dev",
-      "slack": "Lark Health scored 5.3 / 10. Read Replicate docs (26 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
+      "slack": "Lark Health scored 5.0 / 10. Read Replicate docs (26 days since last signal). Displacement: they are evaluating a competitor now. Lead with a speed and cost benchmark."
     },
     {
       "key": "A283",

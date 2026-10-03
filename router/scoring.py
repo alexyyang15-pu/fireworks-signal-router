@@ -98,7 +98,6 @@ def score_signal(signal: Signal, is_customer: bool) -> SignalScore:
         fresh = _first_match(W.COMPETITOR_FRESHNESS, days, W.COMPETITOR_STALE_POINTS, lambda v, lim: v <= lim)
         parts = [
             ("Action: %s" % action.replace("_", " "), W.COMPETITOR_ACTION_POINTS.get(action, 50)),
-            ("Competitor: %s" % competitor, W.COMPETITOR_POINTS.get(competitor, 0)),
             ("%d days since last signal" % days, fresh),
         ]
         verb = COMPETITOR_PHRASES.get(action, action.replace("_", " ") + ": %s")

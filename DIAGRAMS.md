@@ -99,7 +99,7 @@ Every table below is a ranking, highest first. **Why this rank** is the reason t
 | Rank | Signal | Formula | Range in this file | Why this rank |
 |---|---|---|---|---|
 | 1 | Usage spike | 70 + min(20, pct increase / 20) + volume | 79 to 91 | Observed usage on a paying customer. A fact, not an inference |
-| 2 | Competitor | action + competitor + freshness | 44 to 95 | They are shopping a vendor now. A pricing page can outscore usage; a stale benchmark sits much lower, which is why the range is wide |
+| 2 | Competitor | action + freshness | 38 to 89 | They are shopping a vendor now. A pricing page can outscore usage; a stale benchmark sits much lower, which is why the range is wide |
 | 3 | Intent | 50 + intensity × 30 + topic + source | 71 to 89 | They are researching what we sell. Weaker than a live evaluation |
 | 4 | New hire, arrived | title points | up to 83 | A new budget owner revisits the stack in the first 90 days |
 | 5 | Funding | round + min(15, $M / 10) | 35 to 74 | Budget timing, not intent |
@@ -130,12 +130,7 @@ Every table below is a ranking, highest first. **Why this rank** is the reason t
 | 3 | Docs read | 58 | They are learning the product. Earlier in the cycle |
 | 4 | Benchmark download | 46 | Research. Furthest from a decision |
 
-**Ranking: which competitor.** The action still scores either way. These points are only the bonus.
-
-| Rank | Competitor | Points | Why this rank |
-|---|---|---|---|
-| 1 | Together AI, Replicate, Anyscale | +6 | A deal we can win on price and speed |
-| 2 | OpenAI | 0 | Harder to win on price and speed, so the competitor adds nothing |
+Which competitor they looked at does not change the score. Together AI, Replicate, Anyscale, and OpenAI all score the same.
 
 **Ranking: competitor freshness.** Days since their last signal.
 
@@ -234,5 +229,5 @@ Customer, Logistics, `$250M+`, US-Central Strategic. Rachel Park is OOO, so Dieg
 |---|---|---|
 | Lupine Scale | Prospect #3 | Three signals stack to 105, capped at 100; E-commerce fit holds it below Thorn and Chert |
 | Meridian Robotics vs Cedar Defense | Customer #2 vs #6 | Both usage spikes. Payload beats severity hint: +354% marked low outranks +78% marked high |
-| Alabaster Mind vs Iris Secure | Prospect #6 vs #8 | Strong fit (DevTools, `$250M+`) on one funding event beats a hot Together AI comparison with no CRM data. Known first-draft tradeoff |
-| Chert Scale, Osprey Grid | Prospect #2, #5 | Small AI-native accounts in the top industries rise by design |
+| Alabaster Mind vs Iris Secure | Prospect #5 vs #10 | Strong fit (DevTools, `$250M+`) on one funding event beats a hot Together AI comparison with no CRM data. Known first-draft tradeoff |
+| Chert Scale, Osprey Grid | Prospect #2, #6 | Small AI-native accounts in the top industries rise by design |

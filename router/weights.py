@@ -48,14 +48,13 @@ FUNDING_ROUND_POINTS = {
 FUNDING_AMOUNT_DIVISOR = 10
 FUNDING_AMOUNT_CAP = 15
 
-# --- competitor_evaluation: action + competitor + freshness + severity
+# --- competitor_evaluation: action + freshness + severity
 COMPETITOR_ACTION_POINTS = {
     "pricing_page_visit": 82,
     "comparison_search": 74,
     "docs_read": 58,
     "benchmark_download": 46,
 }
-COMPETITOR_POINTS = {"Together AI": 6, "Replicate": 6, "Anyscale": 6, "OpenAI": 0}
 # (max days since last signal, points); first match wins, else STALE.
 COMPETITOR_FRESHNESS = [(7, 10), (14, 5), (21, 0)]
 COMPETITOR_STALE_POINTS = -8
