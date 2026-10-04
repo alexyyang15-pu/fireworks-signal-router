@@ -114,7 +114,8 @@
   .slack .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; margin-top: 8px; font-size: 12px; }
   .slack .fields div span { display: block; color: #9a9b9e; }
   .slack .sbtns { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
-  .slack .sbtn { border: 1px solid #565856; color: #fff; background: transparent; border-radius: 6px; padding: 5px 10px; font: inherit; font-size: 12px; cursor: pointer; text-decoration: none; }
+  .slack .sbtn { border: 1px solid #565856; color: #fff; background: transparent; border-radius: 6px; padding: 5px 10px; font: inherit; font-size: 12px; cursor: pointer; text-decoration: none;
+                 display: inline-flex; align-items: center; gap: 6px; }
   .slack .sbtn.go { background: #007a5a; border-color: #007a5a; }
   .slack .note { font-size: 11px; color: #9a9b9e; padding: 0 14px 12px; text-align: center; }
 
@@ -250,7 +251,7 @@ function renderSlack() {
           <div class="sbtns">
             <button class="sbtn go" data-jump="${esc(c.key)}">Open in dashboard</button>
             <button class="sbtn" data-jump="${esc(c.key)}" data-then="email">Draft email</button>
-            <a class="sbtn" href="${esc(c.salesforce_url)}" target="_blank" rel="noopener">Salesforce</a>
+            <a class="sbtn" href="${esc(c.salesforce_url)}" target="_blank" rel="noopener">${SF_LOGO}Salesforce</a>
           </div>
         </div>
       </div>
