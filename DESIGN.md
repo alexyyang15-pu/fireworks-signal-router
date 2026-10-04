@@ -47,11 +47,6 @@ Scores signals **per account** and routes each account to one seller. Sellers se
 
 Log each signal under its account in Salesforce and track pipeline. Each month, adjust signal scoring when an industry, signal, topic, or source converts above its rank, so the scoring learns from actual sales results on a cadence.
 
-## What I'd do differently
-
-- Route customers to their existing CRM owner before territory.
-- Review fuzzy matches instead of treating unknown fit as neutral.
-
 ## How AI was used
 
 - **Good for:** finding the 16 unmatched signals, the Umber Vision collision, the out-of-office and ramp gaps, and that every usage spike is a customer. Researching public Fireworks customers for the industry rankings. Creating the router, tests, and visual dashboard.
